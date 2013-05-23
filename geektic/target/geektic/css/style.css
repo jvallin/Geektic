@@ -1,0 +1,57 @@
+body{
+	margin: 0 0 0 0px;
+	font-family: "Segoe UI";
+}
+
+header{
+	background: url(../img/banniere.png) no-repeat center;
+	height: 300px;
+}
+
+a{
+	text-decoration: none;
+}
+
+fieldset{
+	border: 10px;
+	border-style:double;
+}
+
+#contenu{
+	margin: 50 100 0 100;
+}
+
+#champ{
+	height: 50px;
+	width: 600px;
+	font-size: 50px;
+	margin-right: 20px;
+}
+
+#b_rechercher{
+	height: 80px;
+	width: 300px;
+	font-size: 50px;
+}
+
+#combo{
+	margin: 20 5 0 20;
+}
+
+#sexe{
+	width: 20%;
+	float: left;
+}
+
+#ci{
+	width: 40%;
+	float: left;
+	margin-top: 20px;
+}
+
+#rechercher_ci{
+	width: 40%;
+	float: right;
+	margin-top: 40px;
+}
+
