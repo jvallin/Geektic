@@ -5,9 +5,9 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import org.springframework.stereotype.Component;
+import jvallin.model.Spectacle;
 
-import com.ninja_squad.tpjpa.model.Spectacle;
+import org.springframework.stereotype.Component;
 
 
 @Component

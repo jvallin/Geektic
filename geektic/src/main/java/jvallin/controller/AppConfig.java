@@ -12,20 +12,22 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+
+
 /**
  * Srping application configuration. Lacks some annotations.
  * @author JB Nizet
  */
 
 @EnableTransactionManagement
-@ComponentScan(value = {"com.ninja_squad.tpjpa", "com.ninja_squad.tpdi"})
+@ComponentScan(value = {"jvallin"})
 @Configuration
 public class AppConfig
 {
     @Bean
     public LocalContainerEntityManagerFactoryBean emf() {
         LocalContainerEntityManagerFactoryBean result = new LocalContainerEntityManagerFactoryBean();
-        result.setPersistenceUnitName("TP_JPA");
+        result.setPersistenceUnitName("GEEKTIC");
         result.setDataSource(dataSource());
         result.setPersistenceProviderClass(HibernatePersistence.class);
         return result;
@@ -33,7 +35,7 @@ public class AppConfig
 
     @Bean
     public DataSource dataSource() {
-        return new DriverManagerDataSource("jdbc:hsqldb:hsql://localhost/TP_JPA", 
+        return new DriverManagerDataSource("jdbc:hsqldb:hsql://localhost/GEEKTIC", 
         									"sa", 
         									"");
     }
