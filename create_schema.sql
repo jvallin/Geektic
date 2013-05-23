@@ -1,6 +1,5 @@
 drop table geek if exists cascade;
 drop table interet if exists cascade;
-drop table association if exists cascade;
 drop sequence geek_seq if exists;
 drop sequence interet_seq if exists;
 
@@ -16,16 +15,10 @@ create table geek (
 
 create table interet (
 	id numeric not null,
-	libelle varchar(255) not null,
-	primary key (id)
-);
-
-create table association (
 	id_geek numeric not null,
-	id_ci numeric not null,
-	primary key (id_geek, id_ci),
-	foreign key (id_geek) references geek(id),	
-	foreign key (id_ci) references interet(id)
+	libelle varchar(255) not null,
+	primary key (id),
+	foreign key (id_geek) references geek(id)
 );
 
 create sequence geek_seq start with 100;
@@ -44,40 +37,28 @@ insert into geek values (10,'Tounu', 'NIPANTALON', 'Sandra', 'F', to_date('28-05
 insert into geek values (11,'Pamoi', 'PAFAISA', 'Jenna', 'F', to_date('30-05-2013', 'DD-MM-YYYY'));
 
 
-insert into interet values (1, 'HTML');
-insert into interet values (2, 'CSS');
-insert into interet values (3, 'PHP');
-insert into interet values (4, 'JS');
-insert into interet values (5, 'JAVA');
-insert into interet values (6, 'C');
-insert into interet values (7, 'C++');
-insert into interet values (8, 'C#');
-insert into interet values (9, 'JUnit');
-insert into interet values (10, 'Mockito');
-
-
-insert into association values (1, 5);
-insert into association values (1, 9);
-insert into association values (2, 1);
-insert into association values (2, 2);
-insert into association values (2, 3);
-insert into association values (2, 4);
-insert into association values (3, 9);
-insert into association values (3, 10);
-insert into association values (4, 1);
-insert into association values (4, 2);
-insert into association values (5, 3);
-insert into association values (5, 4);
-insert into association values (5, 9);
-insert into association values (6, 6);
-insert into association values (6, 7);
-insert into association values (6, 10);
-insert into association values (7, 6);
-insert into association values (8, 1);
-insert into association values (8, 2);
-insert into association values (9, 4);
-insert into association values (9, 9);
-insert into association values (10, 6);
-insert into association values (10, 7);
-insert into association values (11, 9);
-insert into association values (11, 10);
+insert into interet values (1, 1, 'JAVA');
+insert into interet values (2, 1, 'JUnit');
+insert into interet values (3, 2, 'HTML');
+insert into interet values (4, 2, 'CSS');
+insert into interet values (5, 2, 'PHP');
+insert into interet values (6, 2, 'JS');
+insert into interet values (7, 3, 'JUnit');
+insert into interet values (8, 3, 'CS');
+insert into interet values (9, 4, 'HTML');
+insert into interet values (10, 4, 'CSS');
+insert into interet values (11, 5, 'PHP');
+insert into interet values (12, 5, 'JS');
+insert into interet values (13, 5, 'JUnit');
+insert into interet values (14, 6, 'C');
+insert into interet values (15, 6, 'CPP');
+insert into interet values (16, 6, 'Mockito');
+insert into interet values (17, 7, 'C');
+insert into interet values (18, 8, 'HTML');
+insert into interet values (19, 8, 'CSS');
+insert into interet values (20, 9, 'JS');
+insert into interet values (21, 9, 'JUnit');
+insert into interet values (22, 10, 'C');
+insert into interet values (23, 10, 'CPP');
+insert into interet values (24, 11, 'JUnit');
+insert into interet values (25, 11, 'Mockito');
