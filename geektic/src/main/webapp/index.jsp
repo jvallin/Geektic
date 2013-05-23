@@ -57,6 +57,14 @@
 		
 	</div>
 	
+	
+	<% for (int i=0; i<listeGeeks.size(); i++) { %>
+	
+	 <%=listeGeeks.get(i).getPseudo()+", "%>
+	
+	<% } %>
+	
+	
 	<footer>
 	
 	</footer>
