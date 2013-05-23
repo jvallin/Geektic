@@ -56,9 +56,7 @@ public class GeekDao {
 		return em.createQuery(jpql, Geek.class)
 				 .setParameter("sexe", "%" + sexe.toLowerCase() + "%")
 				 .getResultList();
-	}
-	
-	
+	}	
 	
 	public List<Geek> findByInterets(List<Interet> interets) {
 		String jpql = 

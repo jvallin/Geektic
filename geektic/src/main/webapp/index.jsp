@@ -13,7 +13,8 @@
 		
 		<form method="POST" action="">
 			<fieldset><legend><h1>&nbsp;Entrez le pseudo du geek ou de la geekette ...&nbsp;</h1></legend>
-				<input type="text" id="champ">
+				<input type="text" id="champ" name="pseudo">
+				<input type="hidden" id="type_recherche" name="type_recherche" value="0">
 				<input type="submit" id="b_rechercher" name="bouton" value="Rechercher">		
 			</fieldset>
 		</form>
@@ -50,6 +51,7 @@
 				</div>
 				
 				<div id="rechercher_ci">
+					<input type="hidden" id="type_recherche" name="type_recherche" value="1">
 					<input type="submit" id="b_rechercher" name="bouton" value="Rechercher">
 				</div>
 			</fieldset>			

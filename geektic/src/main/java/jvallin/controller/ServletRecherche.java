@@ -9,8 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import jvallin.dao.GeekDao;
+
 @WebServlet("Geektic")
 public class ServletRecherche extends HttpServlet {
+	
+	private GeekDao geekDao;
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -23,17 +28,24 @@ public class ServletRecherche extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		super.doPost(request, response);
+		
+	    String type = request.getParameter("type_recherche");
+	    
+	    if (type.equals("0")) // recherche par pseudo
+	    {
+	    	
+	    }
+	    else // recherche par sexe et interet(s)
+	    {
+	    	
+	    }
+	    
+	    String pseudo = request.getParameter("pseudo");
 
 		PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<head>");
-		String title = "Hello world test";
-		out.println("<title>" + title + "</title>");
-		out.println("</head>");
-		out.println("<body bgcolor=\"black\">");
-		out.println("<h1 style='color:white;'>" + title + "</h1>");
-		out.println("</body>");
-		out.println("</html>");
+
+		
+		request.setAttribute("listeGeeks", geekDao.findBySexe("M"));
 
 		getServletConfig().getServletContext().getRequestDispatcher("index.jsp").forward(request, response);
 

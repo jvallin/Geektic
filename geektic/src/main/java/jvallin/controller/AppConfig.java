@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * Srping application configuration. Lacks some annotations.
- * @author JB Nizet
+ * @author J VALLIN
  */
 
 @EnableTransactionManagement
