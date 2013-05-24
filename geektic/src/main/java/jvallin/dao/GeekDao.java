@@ -48,23 +48,15 @@ public class GeekDao {
 				 .getResultList();
 	}
 	
-	public List<Geek> findBySexe(String sexe) {
-		String jpql = 
-			"select geek from Geek geek"
-			+ " where lower(geek.sexe) like :sexe"
-			+ " order by geek.pseudo";
-		return em.createQuery(jpql, Geek.class)
-				 .setParameter("sexe", "%" + sexe.toLowerCase() + "%")
-				 .getResultList();
-	}	
-	
-	public List<Geek> findByInterets(List<Interet> interets) {
+	public List<Geek> findByInterets(List<Interet> interets ,String sexe) {
 		String jpql = 
 			"select geek from Geek geek"
 			+ " where geek.interets IN (:interets)"
+			+ " and lower(geek.sexe) = :sexe"
 			+ " order by geek.pseudo";
 		return em.createQuery(jpql, Geek.class)
-				 .setParameter("interets",interets)
+				 .setParameter("interets",interets)				 
+				 .setParameter("sexe",sexe.toLowerCase())
 				 .getResultList();
 	}
 	

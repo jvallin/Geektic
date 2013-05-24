@@ -1,6 +1,5 @@
 package jvallin.model;
 
-import java.util.Collections;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -122,14 +121,5 @@ public class Geek {
 
 	public void setInterets(Set<Interet> interets) {
 		this.interets = interets;
-	}
-
-	public Set<Interet> getRepresentations() {
-		return Collections.unmodifiableSet(interets);
-	}
-	
-	public void addRepresentation(Interet interet) {
-		interet.setGeek(this);
-		interets.add(interet);
 	}
 }

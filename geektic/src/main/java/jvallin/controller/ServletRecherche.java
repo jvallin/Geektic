@@ -45,7 +45,7 @@ public class ServletRecherche extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		
-		request.setAttribute("listeGeeks", geekDao.findBySexe("M"));
+		request.setAttribute("listeGeeks", geekDao.findByPseudo("jvallin"));
 
 		getServletConfig().getServletContext().getRequestDispatcher("index.jsp").forward(request, response);
 
