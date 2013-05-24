@@ -49,10 +49,16 @@ public class GeekDao {
 	}
 	
 	public List<Geek> findByInterets(List<Interet> interets ,String sexe) {
+		
+		if(sexe.equals("D"))
+		{
+			sexe = "H, F";
+		}		
+		
 		String jpql = 
 			"select geek from Geek geek"
 			+ " where geek.interets IN (:interets)"
-			+ " and lower(geek.sexe) = :sexe"
+			+ " and lower(geek.sexe) in (:sexe)"
 			+ " order by geek.pseudo";
 		return em.createQuery(jpql, Geek.class)
 				 .setParameter("interets",interets)				 
