@@ -11,15 +11,14 @@
 		
 	<div id="contenu">
 		
-		<form method="POST" action="">
+		<form method="POST" action="/geektic/search1">
 			<fieldset><legend><h1>&nbsp;Entrez le pseudo du geek ou de la geekette ...&nbsp;</h1></legend>
 				<input type="text" id="champ" name="pseudo">
-				<input type="hidden" id="type_recherche" name="type_recherche" value="0">
 				<input type="submit" id="b_rechercher" name="bouton" value="Rechercher">		
 			</fieldset>
 		</form>
 		
-		<form method="POST" action="">
+		<form method="POST" action="/geektic/search2">
 			<fieldset><legend><h1>&nbsp;... ou recherchez par centres d'interêt&nbsp;</h1></legend>
 				<div id="sexe">
 					<input id="geek" type="radio" name="sexe" value="1" checked><label for="geek"></label><img src="img/geek.gif" alt="Geek" height="20%" width="20%">Geek</label></br></br>
@@ -30,20 +29,20 @@
 				<div id="ci">
 					<table>
 						<tr>
-							<td><input id="combo1" type="checkbox" name="int_html" value="1">HTML</td>
-							<td><input id="combo2" type="checkbox" name="int_css" value="2">CSS</td>
-							<td><input id="combo3" type="checkbox" name="int_php" value="3">PHP</td>
-							<td><input id="combo4" type="checkbox" name="int_js" value="4">JS</td>
+							<td><input id="combo1" type="checkbox" name="interet" value="1">HTML</td>
+							<td><input id="combo2" type="checkbox" name="interet" value="2">CSS</td>
+							<td><input id="combo3" type="checkbox" name="interet" value="3">PHP</td>
+							<td><input id="combo4" type="checkbox" name="interet" value="4">JS</td>
 						</tr>
 						<tr>
-							<td><input id="combo5" type="checkbox" name="int_java" value="5">JAVA</td>
-							<td><input id="combo6" type="checkbox" name="int_c" value="6">C</td>
-							<td><input id="combo7" type="checkbox" name="int_cpp" value="7">C++</td>
-							<td><input id="combo8" type="checkbox" name="int_cs" value="8">C#</td>
+							<td><input id="combo5" type="checkbox" name="interet" value="5">JAVA</td>
+							<td><input id="combo6" type="checkbox" name="interet" value="6">C</td>
+							<td><input id="combo7" type="checkbox" name="interet" value="7">C++</td>
+							<td><input id="combo8" type="checkbox" name="interet" value="8">C#</td>
 						</tr>					
 						<tr>
-							<td><input id="combo9" type="checkbox" name="int_junit" value="9">JUnit</td>
-							<td><input id="combo10" type="checkbox" name="int_mockito" value="10">Mockito</td>
+							<td><input id="combo9" type="checkbox" name="interet" value="9">JUnit</td>
+							<td><input id="combo10" type="checkbox" name="interet" value="10">Mockito</td>
 							<td></td>
 							<td></td>
 						</tr>
@@ -58,13 +57,6 @@
 		</form>
 		
 	</div>
-	
-	
-	<% for (int i=0; i<listeGeeks.size(); i++) { %>
-	
-	 <%=listeGeeks.get(i).getPseudo()+", "%>
-	
-	<% } %>
 	
 	
 	<footer>
