@@ -2,6 +2,7 @@ package jvallin.dao;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -10,6 +11,7 @@ import javax.persistence.Persistence;
 
 import junit.framework.TestCase;
 import jvallin.model.Geek;
+import jvallin.model.Interet;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -47,10 +49,19 @@ public class TestGeekDao
     }
     
     @Test
-    public void testFindByPseudoBalckangel() {
+    public void testFindByPseudoCompletBalckangel() {
         List<Geek> listeGeek = dao.findByPseudo("Balckangel");
         assertEquals(1, listeGeek.size());
         assertEquals(1L, listeGeek.get(0).getId().longValue());
+    }
+    
+
+    @Test
+    public void testFindByPseudoPartielFou() {
+        List<Geek> listeGeek = dao.findByPseudo("ob");
+        assertEquals(2, listeGeek.size());
+        assertEquals(7L, listeGeek.get(0).getId().longValue()); // car order by pseudo !!
+        assertEquals(6L, listeGeek.get(1).getId().longValue());
     }
     
     @Test
