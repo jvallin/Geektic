@@ -1,5 +1,7 @@
 package jvallin.dao;
 
+import static org.junit.Assert.*;
+
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -15,7 +17,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class TestGeekDao extends TestCase
+public class TestGeekDao 
 {
 	public GeekDao dao;	
 	private static EntityManagerFactory emFactory;
@@ -50,5 +52,11 @@ public class TestGeekDao extends TestCase
         assertEquals(1, listeGeek.size());
         assertEquals(1L, listeGeek.get(0).getId().longValue());
     }
+    
+    @Test
+    public void test() {
+    }
+    
+    
 
 }

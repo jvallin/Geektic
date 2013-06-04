@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import jvallin.dao.GeekDao;
 
-@WebServlet("Geektic")
+@WebServlet("Search")
 public class ServletRecherche extends HttpServlet {
 	
 	private GeekDao geekDao;

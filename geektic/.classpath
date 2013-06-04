@@ -28,5 +28,15 @@
 	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-jdbc/3.2.2.RELEASE/spring-jdbc-3.2.2.RELEASE.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-tx/3.2.2.RELEASE/spring-tx-3.2.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="F:/Cours/J2EE/Fournis/DbSetup-1.0-RC1/DbSetup-1.0-RC1.jar"/>
+	<classpathentry kind="lib" path="F:/Cours/J2EE/Fournis/jbosstools-4.0.0.Final.aggregate-Update-2012-12-06_13-22-08-B136.zip"/>
+	<classpathentry kind="lib" path="F:/Cours/J2EE/Fournis/hibernate-release-4.1.9.Final/lib/jpa/hibernate-entitymanager-4.1.9.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Cours/J2EE/Fournis/hibernate-release-4.1.9.Final/lib/required/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="F:/Cours/J2EE/Fournis/hibernate-release-4.1.9.Final/lib/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="F:/Cours/J2EE/Fournis/hibernate-release-4.1.9.Final/lib/required/hibernate-commons-annotations-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Cours/J2EE/Fournis/hibernate-release-4.1.9.Final/lib/required/hibernate-core-4.1.9.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Cours/J2EE/Fournis/hibernate-release-4.1.9.Final/lib/required/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Cours/J2EE/Fournis/hibernate-release-4.1.9.Final/lib/required/javassist-3.17.1-GA.jar"/>
+	<classpathentry kind="lib" path="F:/Cours/J2EE/Fournis/hibernate-release-4.1.9.Final/lib/required/jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="F:/Cours/J2EE/Fournis/hibernate-release-4.1.9.Final/lib/required/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
