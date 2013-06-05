@@ -10,8 +10,8 @@ import javax.persistence.metamodel.StaticMetamodel;
 @StaticMetamodel(Geek_.class)
 public class Geek_ {
 	public static volatile SingularAttribute<Spectacle, Long> id;
-	public static volatile SingularAttribute<Spectacle, String> titre;
+	public static volatile SingularAttribute<Spectacle, String> pseudo;
 	public static volatile SingularAttribute<Spectacle, String> artiste;
-	public static volatile SingularAttribute<Spectacle, String> type;
+	public static volatile SingularAttribute<Spectacle, String> sexe;
 	public static volatile SetAttribute<Spectacle, Representation> representations;
 }

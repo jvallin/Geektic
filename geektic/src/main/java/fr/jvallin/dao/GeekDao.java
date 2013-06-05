@@ -25,7 +25,7 @@ public class GeekDao {
 	}
 	
 	public List<Spectacle> findAll() {
-		String jpql = "select spectacle from Spectacle spectacle order by spectacle.titre";
+		String jpql = "select g from Spectacle g order by g.pseudo";
 		return em.createQuery(jpql, Spectacle.class).getResultList();
 	}
 	
@@ -39,29 +39,29 @@ public class GeekDao {
 	
 	public List<Spectacle> findByArtiste(String artiste) {
 		String jpql = 
-			"select spectacle from Spectacle spectacle"
-			+ " where lower(spectacle.artiste) like :artiste"
-			+ " order by spectacle.titre";
+			"select g from Spectacle g"
+			+ " where lower(g.artiste) like :artiste"
+			+ " order by g.pseudo";
 		return em.createQuery(jpql, Spectacle.class)
 				 .setParameter("artiste", "%" + artiste.toLowerCase() + "%")
 				 .getResultList();
 	}
 	
-	public List<Spectacle> findByTitre(String titre) {
+	public List<Spectacle> findByPseudo(String pseudo) {
 		String jpql = 
-			"select spectacle from Spectacle spectacle"
-			+ " where lower(spectacle.titre) like :titre"
-			+ " order by spectacle.titre";
+			"select g from Spectacle g"
+			+ " where lower(g.pseudo) like :pseudo"
+			+ " order by g.pseudo";
 		return em.createQuery(jpql, Spectacle.class)
-				 .setParameter("titre", "%" + titre.toLowerCase() + "%")
+				 .setParameter("pseudo", "%" + pseudo.toLowerCase() + "%")
 				 .getResultList();
 	}
 	
 	public List<Spectacle> findBySexe(String sexe) {
 		String jpql = 
-			"select spectacle from Spectacle spectacle"
-			+ " where lower(spectacle.type) like :sexe"
-			+ " order by spectacle.titre";
+			"select g from Spectacle g"
+			+ " where lower(g.sexe) like :sexe"
+			+ " order by g.pseudo";
 		return em.createQuery(jpql, Spectacle.class)
 				 .setParameter("sexe", "%" + sexe.toLowerCase() + "%")
 				 .getResultList();

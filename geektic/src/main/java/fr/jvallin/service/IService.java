@@ -6,9 +6,9 @@ import fr.jvallin.model.Spectacle;
 
 public interface IService
 {
-	public List<Spectacle> findByTitre(String titre);
+	public List<Spectacle> findByPseudo(String pseudo);
 	
-	public void creer(String titre, String artiste, String type);
+	public void creer(String pseudo, String artiste, String sexe);
 	
 	public List<Spectacle> findAll();
 	

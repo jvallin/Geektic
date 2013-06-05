@@ -28,10 +28,10 @@ public class GeekController
 	}
 	
 	@RequestMapping(value = "searchPseudo", method = RequestMethod.GET)
-	public ModelAndView showSearchPseudo(@RequestParam String titre)
+	public ModelAndView showSearchPseudo(@RequestParam String pseudo)
 	{
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("spectacles", service.findByTitre(titre));
+		mv.addObject("spectacles", service.findByPseudo(pseudo));
 		mv.setViewName("list");
 		
 		return mv;

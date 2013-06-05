@@ -48,21 +48,21 @@ public class TestService
     
     @Test
     public void testFindByPseudoCompletBalckangel() {
-        List<Spectacle> listeGeek = dao.findByTitre("Balckangel");
+        List<Spectacle> listeGeek = dao.findByPseudo("Balckangel");
         assertEquals(1, listeGeek.size());
         assertEquals(1L, listeGeek.get(0).getId().longValue());
     }
     
     @Test
     public void testFindByPseudoLikeou() {
-        List<Spectacle> listeGeek = dao.findByTitre("ou");
+        List<Spectacle> listeGeek = dao.findByPseudo("ou");
         assertEquals(3, listeGeek.size());
     }
     
     @Test
     public void testFindById1() {
         Spectacle geek = dao.findById(1L);
-        assertEquals("Balckangel", geek.getTitre());
+        assertEquals("Balckangel", geek.getPseudo());
     }
     
     @Test

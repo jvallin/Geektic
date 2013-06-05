@@ -14,7 +14,7 @@
 			<form method="GET" action="searchPseudo">
 				<fieldset>
 					<legend><h1>&nbsp;Entrez le pseudo du geek ou de la geekette ...&nbsp;</h1></legend>
-					<input type="text" id="champ" name="titre">
+					<input type="text" id="champ" name="pseudo">
 					<input type="submit" id="b_rechercher" name="bouton" value="Rechercher">
 				</fieldset>
 			</form>	
@@ -22,9 +22,9 @@
 			<form method="GET" action="searchSexe">
 			<fieldset><legend><h1>&nbsp;... ou recherchez par sexe&nbsp;</h1></legend>
 				<div id="sexe">
-					<input type="radio" name="radioBouton" value="M" checked><img src="img/geek.gif" alt="Geek" height="20%" width="20%">Geek</br></br>
+					<input type="radio" name="radioBouton" value="M"><img src="img/geek.gif" alt="Geek" height="20%" width="20%">Geek</br></br>
 					<input type="radio" name="radioBouton" value="F"><img src="img/geekette.gif" alt="Geekette" height="20%" width="20%">Geekette</br></br>  
-					<input type="radio" name="radioBouton" value="D"><img src="img/deux.gif" alt="Les deux" height="20%" width="20%">Les deux 
+					<input type="radio" name="radioBouton" value="D" checked><img src="img/deux.gif" alt="Les deux" height="20%" width="20%">Les deux 
 				</div>
 				
 				<div id="rechercher_ci">

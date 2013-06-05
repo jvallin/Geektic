@@ -14,7 +14,7 @@
 			
 				<c:forEach var="spectacle" items="${spectacles}">
 			    	<li>
-			    		<c:out value="${spectacle.titre}"/>
+			    		<c:out value="${spectacle.pseudo}"/>
 			    		<a href="<c:url value='/detail'><c:param name='id' value='${spectacle.id}' /></c:url>">Voir le profil</a>
 			    	</li>
 			    </c:forEach>

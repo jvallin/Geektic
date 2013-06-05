@@ -22,15 +22,15 @@ public class ServiceGeek implements IService
 		this.dao = dao;
 	}
 	
-	public List<Spectacle> findByTitre(String titre)
+	public List<Spectacle> findByPseudo(String pseudo)
 	{
-		return dao.findByTitre(titre);
+		return dao.findByPseudo(pseudo);
 	}
 		
 	// Méthode pour ajouter un Spectacle
-	public void creer(String titre, String artiste, String type)
+	public void creer(String pseudo, String artiste, String sexe)
 	{		
-		dao.persist(new Spectacle(titre, artiste, type));
+		dao.persist(new Spectacle(pseudo, artiste, sexe));
 	}
 	
 	public List<Spectacle> findAll()

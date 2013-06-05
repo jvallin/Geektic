@@ -25,13 +25,13 @@ public class Spectacle {
 	@Column(name = "ID_SPECTACLE")
 	private Long id;
 	
-	private String titre;
+	private String pseudo;
 	
 	private String artiste;
 	
 	private String prenom;
 	
-	private String type;
+	private String sexe;
 	
 	@OneToMany(mappedBy = "spectacle")
 	private Set<Representation> representations = new HashSet<>(0);
@@ -39,10 +39,10 @@ public class Spectacle {
 	public Spectacle() {
 	}
 	
-	public Spectacle(String titre, String artiste, String type) {
-		this.titre = titre;
+	public Spectacle(String pseudo, String artiste, String sexe) {
+		this.pseudo = pseudo;
 		this.artiste = artiste;
-		this.type = type;
+		this.sexe = sexe;
 	}
 
 	public Long getId() {
@@ -53,12 +53,12 @@ public class Spectacle {
 		this.id = id;
 	}
 
-	public String getTitre() {
-		return titre;
+	public String getPseudo() {
+		return pseudo;
 	}
 
-	public void setTitre(String titre) {
-		this.titre = titre;
+	public void setPseudo(String pseudo) {
+		this.pseudo = pseudo;
 	}
 
 	public String getArtiste() {
@@ -77,12 +77,12 @@ public class Spectacle {
 		this.prenom = prenom;
 	}
 
-	public String getType() {
-		return type;
+	public String getSexe() {
+		return sexe;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setSexe(String sexe) {
+		this.sexe = sexe;
 	}
 	
 	public Set<Representation> getRepresentations() {
