@@ -14,5 +14,4 @@ public class Geek_ {
 	public static volatile SingularAttribute<Geek, String> nom;
 	public static volatile SingularAttribute<Geek, String> sexe;
 	public static volatile SingularAttribute<Geek, Integer> nbvus;
-	public static volatile SetAttribute<Geek, Representation> representations;
 }

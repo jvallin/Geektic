@@ -34,9 +34,6 @@ public class Geek {
 	
 	private int nbvus;
 	
-	@OneToMany(mappedBy = "geek")
-	private Set<Representation> representations = new HashSet<>(0);
-	
 	public Geek() {
 	}
 	
@@ -92,14 +89,5 @@ public class Geek {
 
 	public void setNbvus(int nbvus) {
 		this.nbvus = nbvus;
-	}
-
-	public Set<Representation> getRepresentations() {
-		return Collections.unmodifiableSet(representations);
-	}
-	
-	public void addRepresentation(Representation representation) {
-		representation.setSpectacle(this);
-		representations.add(representation);
 	}
 }
