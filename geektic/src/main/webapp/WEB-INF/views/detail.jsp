@@ -18,7 +18,7 @@
 			Sexe : <c:out value="${geeks.sexe}"/>			
 			<br/>
 			
-			<a href="<c:url value='/'/>">Retour à la recherche</a>
+			<h2><a href="<c:url value='/'/>">Retour à la page de recherche</a></h2>
 		</div>
 	</body>
 </html>

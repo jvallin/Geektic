@@ -58,7 +58,9 @@ public class GeekController
 	@RequestMapping(value = "searchJDLC", method = RequestMethod.GET)
 	public ModelAndView showSearchJDLC()
 	{
-		String id = "6";
+		int random = (int)(Math.random() * (11-1)) + 1;
+		
+		String id = random+"";
 		
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("geeks", service.findById(id));

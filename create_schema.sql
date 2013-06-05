@@ -22,14 +22,14 @@ create table representation (
 create sequence spectacle_seq start with 1000;
 create sequence representation_seq start with 1000;
 
-insert into spectacle values (1,'Balckangel', 'VALLIN', 'M', 'Jeremy');
-insert into spectacle values (2,'Rafoufoun', 'PANOYAN', 'M', 'Rafi');
-insert into spectacle values (3,'SebLaChaude', 'CHANAL', 'M', 'Sebastien');
-insert into spectacle values (4,'Bibiche', 'PEREAU', 'F', 'Clara');
-insert into spectacle values (5,'Loulou', 'DUPONTAI', 'F', 'Louise');
-insert into spectacle values (6,'Robert', 'SAIRIEN', 'M', 'Jean');
-insert into spectacle values (7,'Boobs', 'BAR', 'M', 'Leny');
-insert into spectacle values (8,'Doremi', 'DEAU', 'M', 'Remy');
-insert into spectacle values (9,'Juju', 'DUFRANC', 'F', 'Justine');
-insert into spectacle values (10,'Tounu', 'NIPANTALON', 'F', 'Sandra');
-insert into spectacle values (11,'Pamoi', 'PAFAISA', 'F', 'Jenna');
+insert into spectacle values (1,'Balckangel', 'VALLIN', 'Jeremy', 'M');
+insert into spectacle values (2,'Rafoufoun', 'PANOYAN', 'Rafi', 'M');
+insert into spectacle values (3,'SebLaChaude', 'CHANAL', 'Sebastien', 'M');
+insert into spectacle values (4,'Bibiche', 'PEREAU', 'Clara', 'F');
+insert into spectacle values (5,'Loulou', 'DUPONTAI', 'Louise', 'F');
+insert into spectacle values (6,'Robert', 'SAIRIEN', 'Jean', 'M');
+insert into spectacle values (7,'Boobs', 'BAR', 'Leny', 'M');
+insert into spectacle values (8,'Doremi', 'DEAU', 'Remy', 'M');
+insert into spectacle values (9,'Juju', 'DUFRANC', 'Justine', 'F');
+insert into spectacle values (10,'Tounu', 'NIPANTALON', 'Sandra', 'F');
+insert into spectacle values (11,'Pamoi', 'PAFAISA', 'Jenna', 'F');
