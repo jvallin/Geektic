@@ -8,7 +8,7 @@ public interface IService
 {
 	public List<Spectacle> findByPseudo(String pseudo);
 	
-	public void creer(String pseudo, String artiste, String sexe);
+	public void creer(String pseudo, String nom, String sexe);
 	
 	public List<Spectacle> findAll();
 	

@@ -4,9 +4,10 @@ drop sequence representation_seq if exists;
 
 create table spectacle (
 	id numeric not null,
-	titre varchar(255) not null,
-	artiste varchar(255) not null,
-	type varchar(255) not null,
+	pseudo varchar(255) not null,
+	nom varchar(255) not null,
+	prenom varchar(255) not null,
+	sexe varchar(1) not null,
 	primary key (id)
 );
 
@@ -15,7 +16,7 @@ create table representation (
 	date_representation timestamp not null,
 	id_spectacle numeric not null,
 	primary key (id),
-	foreign key (id_spectacle) references spectacle(id_spectacle)
+	foreign key (id_spectacle) references spectacle(id)
 );
 
 create sequence spectacle_seq start with 1000;

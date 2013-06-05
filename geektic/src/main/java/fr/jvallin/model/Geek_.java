@@ -11,7 +11,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 public class Geek_ {
 	public static volatile SingularAttribute<Spectacle, Long> id;
 	public static volatile SingularAttribute<Spectacle, String> pseudo;
-	public static volatile SingularAttribute<Spectacle, String> artiste;
+	public static volatile SingularAttribute<Spectacle, String> nom;
 	public static volatile SingularAttribute<Spectacle, String> sexe;
 	public static volatile SetAttribute<Spectacle, Representation> representations;
 }

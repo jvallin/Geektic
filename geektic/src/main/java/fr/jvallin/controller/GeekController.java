@@ -31,7 +31,7 @@ public class GeekController
 	public ModelAndView showSearchPseudo(@RequestParam String pseudo)
 	{
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("spectacles", service.findByPseudo(pseudo));
+		mv.addObject("geeks", service.findByPseudo(pseudo));
 		mv.setViewName("list");
 		
 		return mv;
@@ -44,13 +44,25 @@ public class GeekController
 		ModelAndView mv = new ModelAndView();
 		if(radioBouton.equals("D"))
 		{
-			mv.addObject("spectacles", service.findAll());
+			mv.addObject("geeks", service.findAll());
 		}
 		else
 		{
-			mv.addObject("spectacles", service.findBySexe(radioBouton));
+			mv.addObject("geeks", service.findBySexe(radioBouton));
 		}
 		mv.setViewName("list");
+		
+		return mv;
+	}
+	
+	@RequestMapping(value = "searchJDLC", method = RequestMethod.GET)
+	public ModelAndView showSearchJDLC()
+	{
+		String id = "6";
+		
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("geeks", service.findById(id));
+		mv.setViewName("detail");
 		
 		return mv;
 	}
@@ -60,7 +72,7 @@ public class GeekController
 	public ModelAndView showDetail(@RequestParam(required = true, value="id") String id)
 	{
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("spectacle", service.findById(id));
+		mv.addObject("geeks", service.findById(id));
 		mv.setViewName("detail");
 		
 		return mv;

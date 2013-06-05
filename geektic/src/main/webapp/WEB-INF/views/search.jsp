@@ -20,17 +20,27 @@
 			</form>	
 			
 			<form method="GET" action="searchSexe">
-			<fieldset><legend><h1>&nbsp;... ou recherchez par sexe&nbsp;</h1></legend>
-				<div id="sexe">
-					<input type="radio" name="radioBouton" value="M"><img src="img/geek.gif" alt="Geek" height="20%" width="20%">Geek</br></br>
-					<input type="radio" name="radioBouton" value="F"><img src="img/geekette.gif" alt="Geekette" height="20%" width="20%">Geekette</br></br>  
-					<input type="radio" name="radioBouton" value="D" checked><img src="img/deux.gif" alt="Les deux" height="20%" width="20%">Les deux 
-				</div>
-				
-				<div id="rechercher_ci">
-					<input type="submit" id="b_rechercher" name="bouton" value="Rechercher">
-				</div>
-			</form>	
+				<fieldset><legend><h1>&nbsp;... ou recherchez par sexe&nbsp;</h1></legend>
+					<div id="sexe">
+						<input type="radio" name="radioBouton" value="M"><img src="img/geek.gif" alt="Geek" height="20%" width="20%">Geek</br></br>
+						<input type="radio" name="radioBouton" value="F"><img src="img/geekette.gif" alt="Geekette" height="20%" width="20%">Geekette</br></br>  
+						<input type="radio" name="radioBouton" value="D" checked><img src="img/deux.gif" alt="Les deux" height="20%" width="20%">Les deux 
+					</div>
+					
+					<div id="rechercher_ci">
+						<input type="submit" id="b_rechercher" name="bouton" value="Rechercher">
+					</div>
+				</fieldset>
+			</form>
+			<br/>
+			<form method="GET" action="searchJDLC">
+				<center>
+					<input type="submit" id="b_jdlc" name="jdlc" value="J'ai de la chance !">
+				</center>
+			</form>
 		</div>
+		
+			
+		
 	</body>
 </html>

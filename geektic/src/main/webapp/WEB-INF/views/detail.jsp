@@ -9,13 +9,13 @@
 	<body>
 		<header> </header>
 		<div id="result">
-			<h2><c:out value="${spectacle.pseudo}"/></h2>
+			<h2><c:out value="${geeks.pseudo}"/></h2>
 			
-			Nom : <c:out value="${spectacle.artiste}"/>
+			Nom : <c:out value="${geeks.nom}"/>
 			<br/>
-			Prenom : <c:out value="${spectacle.prenom}"/>
+			Prenom : <c:out value="${geeks.prenom}"/>
 			<br/>
-			Sexe : <c:out value="${spectacle.sexe}"/>			
+			Sexe : <c:out value="${geeks.sexe}"/>			
 			<br/>
 			
 			<a href="<c:url value='/'/>">Retour à la recherche</a>

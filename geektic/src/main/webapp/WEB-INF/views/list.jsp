@@ -12,7 +12,7 @@
 		<div id="result">
 				<h1>Résultat de recherche</h1>
 			
-				<c:forEach var="spectacle" items="${spectacles}">
+				<c:forEach var="spectacle" items="${geeks}">
 			    	<li>
 			    		<c:out value="${spectacle.pseudo}"/>
 			    		<a href="<c:url value='/detail'><c:param name='id' value='${spectacle.id}' /></c:url>">Voir le profil</a>

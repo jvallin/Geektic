@@ -22,12 +22,11 @@ public class Spectacle {
 	@Id
 	@SequenceGenerator(name = "spectacle_generator", sequenceName = "SPECTACLE_SEQ", allocationSize = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "spectacle_generator")
-	@Column(name = "ID_SPECTACLE")
 	private Long id;
 	
 	private String pseudo;
 	
-	private String artiste;
+	private String nom;
 	
 	private String prenom;
 	
@@ -39,9 +38,9 @@ public class Spectacle {
 	public Spectacle() {
 	}
 	
-	public Spectacle(String pseudo, String artiste, String sexe) {
+	public Spectacle(String pseudo, String nom, String sexe) {
 		this.pseudo = pseudo;
-		this.artiste = artiste;
+		this.nom = nom;
 		this.sexe = sexe;
 	}
 
@@ -61,12 +60,12 @@ public class Spectacle {
 		this.pseudo = pseudo;
 	}
 
-	public String getArtiste() {
-		return artiste;
+	public String getNom() {
+		return nom;
 	}
 
-	public void setArtiste(String artiste) {
-		this.artiste = artiste;
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 	
 	public String getPrenom() {

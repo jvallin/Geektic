@@ -28,9 +28,9 @@ public class ServiceGeek implements IService
 	}
 		
 	// Méthode pour ajouter un Spectacle
-	public void creer(String pseudo, String artiste, String sexe)
+	public void creer(String pseudo, String nom, String sexe)
 	{		
-		dao.persist(new Spectacle(pseudo, artiste, sexe));
+		dao.persist(new Spectacle(pseudo, nom, sexe));
 	}
 	
 	public List<Spectacle> findAll()

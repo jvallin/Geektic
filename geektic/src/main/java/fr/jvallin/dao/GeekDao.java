@@ -37,13 +37,13 @@ public class GeekDao {
 		return em.find(Spectacle.class, id);
 	}
 	
-	public List<Spectacle> findByArtiste(String artiste) {
+	public List<Spectacle> findByNom(String nom) {
 		String jpql = 
 			"select g from Spectacle g"
-			+ " where lower(g.artiste) like :artiste"
+			+ " where lower(g.nom) like :nom"
 			+ " order by g.pseudo";
 		return em.createQuery(jpql, Spectacle.class)
-				 .setParameter("artiste", "%" + artiste.toLowerCase() + "%")
+				 .setParameter("nom", "%" + nom.toLowerCase() + "%")
 				 .getResultList();
 	}
 	

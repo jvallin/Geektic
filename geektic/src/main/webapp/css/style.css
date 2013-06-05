@@ -39,6 +39,12 @@ fieldset{
 	font-size: 50px;
 }
 
+#b_jdlc{
+	height: 80px;
+	width: 600px;
+	font-size: 50px;
+}
+
 #combo{
 	margin: 20 5 0 20;
 }

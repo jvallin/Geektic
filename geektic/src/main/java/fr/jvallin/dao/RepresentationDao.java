@@ -29,9 +29,9 @@ public class RepresentationDao {
 		Path<Spectacle> spectacle = representation.join(Interet_.spectacle);
 		Predicate dateAfter = cb.greaterThanOrEqualTo(representation.get(Interet_.date), criteria.getDateDebut());
 		Predicate dateBefore = cb.lessThanOrEqualTo(representation.get(Interet_.date), criteria.getDateFin());
-		Predicate likeArtiste = cb.like(cb.lower(spectacle.get(Geek_.artiste)), "%" + criteria.getArtiste().toLowerCase() + "%");
+		Predicate likeNom = cb.like(cb.lower(spectacle.get(Geek_.nom)), "%" + criteria.getArtiste().toLowerCase() + "%");
 		
-		cq.where(dateBefore, dateAfter, likeArtiste);
+		cq.where(dateBefore, dateAfter, likeNom);
 		representation.fetch(Interet_.spectacle);
 		cq.select(representation).orderBy(cb.asc(representation.get(Interet_.date)));
 		return em.createQuery(cq).getResultList();
