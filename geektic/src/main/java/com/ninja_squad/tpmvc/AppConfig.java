@@ -74,7 +74,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public LocalContainerEntityManagerFactoryBean emf() {
         LocalContainerEntityManagerFactoryBean result = new LocalContainerEntityManagerFactoryBean();
-        result.setPersistenceUnitName("TP_JPA");
+        result.setPersistenceUnitName("GEEKTIC");
         result.setDataSource(dataSource());
         result.setPersistenceProviderClass(HibernatePersistence.class);
         return result;
@@ -82,7 +82,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
     @Bean
     public DataSource dataSource() {
-        DriverManagerDataSource result = new DriverManagerDataSource("jdbc:hsqldb:hsql://localhost/TP_JPA", "sa", "");
+        DriverManagerDataSource result = new DriverManagerDataSource("jdbc:hsqldb:hsql://localhost/GEEKTIC", "sa", "");
         result.setDriverClassName(org.hsqldb.jdbc.JDBCDriver.class.getName());
         return result;
     }
