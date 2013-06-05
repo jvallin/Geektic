@@ -21,6 +21,11 @@ fieldset{
 	margin: 50 100 0 100;
 }
 
+#result{
+	margin: 50 100 0 100;
+	text-align: center;
+}
+
 #champ{
 	height: 50px;
 	width: 600px;

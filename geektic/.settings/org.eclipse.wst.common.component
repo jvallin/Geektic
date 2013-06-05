@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+	<wb-module deploy-name="geektic">
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/resources"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/java"/>
+		<wb-resource deploy-path="/" source-path="src/main/webapp"/>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.hibernate/hibernate-entitymanager/4.1.10.Final/jar/f069607c5a4fa4313205a6d1fb76f70e3524e322/hibernate-entitymanager-4.1.10.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.springframework/spring-context/3.2.2.RELEASE/jar/a5bdbcd5fa58680b6fe1f0143f370003747584db/spring-context-3.2.2.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.springframework/spring-orm/3.2.2.RELEASE/jar/48a19965a0112a613624e8c9c78b4e4184e45740/spring-orm-3.2.2.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.springframework/spring-jdbc/3.2.2.RELEASE/jar/6e76b68ea33194c9b92f3be926cc43945db2977f/spring-jdbc-3.2.2.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.springframework/spring-web/3.2.2.RELEASE/jar/ebde82aa745966f34a8ae1273e363f0a2366eb33/spring-web-3.2.2.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/1.0.1.Final/jar/3306a165afa81938fc3d8a0948e891de9f6b192b/hibernate-jpa-2.0-api-1.0.1.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.hibernate.common/hibernate-commons-annotations/4.0.1.Final/jar/78bcf608d997d0529be2f4f781fdc89e801c9e88/hibernate-commons-annotations-4.0.1.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/commons-logging/commons-logging/1.1.1/jar/5043bfebc3db072ed80fbd362e7caf00e885d8ae/commons-logging-1.1.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/aopalliance/aopalliance/1.0/jar/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/antlr/antlr/2.7.7/jar/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.jboss.spec.javax.transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jar/2ab6236535e085d86f37fd97ddfdd35c88c1a419/jboss-transaction-api_1.1_spec-1.0.0.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.javassist/javassist/3.15.0-GA/jar/79907309ca4bb4e5e51d4086cc4179b2611358d7/javassist-3.15.0-GA.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.springframework/spring-webmvc/3.2.2.RELEASE/jar/dd962b49d731a69c4ca0c4ec67b71076742657cc/spring-webmvc-3.2.2.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.jboss.logging/jboss-logging/3.1.0.GA/jar/c71f2856e7b60efe485db39b37a31811e6c84365/jboss-logging-3.1.0.GA.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.glassfish.web/javax.servlet.jsp.jstl/1.2.1/jar/7f687140e9d264ee00eaa924714adf9a82cc18dc/javax.servlet.jsp.jstl-1.2.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/javax.servlet.jsp.jstl/javax.servlet.jsp.jstl-api/1.2.1/jar/f072f63ab1689e885ac40c221df3e6bb3e64a84a/javax.servlet.jsp.jstl-api-1.2.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.hibernate/hibernate-core/4.1.10.Final/jar/1600b79cffc60111a656e9ab045d31b077da82d1/hibernate-core-4.1.10.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.springframework/spring-expression/3.2.2.RELEASE/jar/565213c52cbbcd57a64ce9e4f18823c964cb2481/spring-expression-3.2.2.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.springframework/spring-core/3.2.2.RELEASE/jar/302bd922c30a4d4bfb15b76a5939117b425eb480/spring-core-3.2.2.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.hsqldb/hsqldb/2.2.9/jar/23365fb055315725a8e69777e3d2e1e8a5d4878f/hsqldb-2.2.9.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.springframework/spring-aop/3.2.2.RELEASE/jar/543a5442a0344af3885d4b3e457cfcab4183cec9/spring-aop-3.2.2.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/dom4j/dom4j/1.6.1/jar/5d3ccc056b6f056dbf0dddfdf43894b9065a8f94/dom4j-1.6.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.springframework/spring-tx/3.2.2.RELEASE/jar/b709255ee5ffea25b3882167e49a3dcb99cc582c/spring-tx-3.2.2.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/F:/Cours/J2EE/tpmvc/caches/artifacts-23/filestore/org.springframework/spring-beans/3.2.2.RELEASE/jar/bbe3f76d14e9471e339bd8afec07b6fc5c916cd4/spring-beans-3.2.2.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+        <property name="context-root" value="geektic"/>
+	</wb-module>
+</project-modules>
