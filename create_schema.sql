@@ -2,7 +2,7 @@ drop table spectacle if exists cascade;
 drop sequence spectacle_seq if exists;
 drop sequence representation_seq if exists;
 
-create table spectacle (
+create table geek (
 	id numeric not null,
 	pseudo varchar(255) not null,
 	nom varchar(255) not null,
@@ -22,14 +22,14 @@ create table representation (
 create sequence spectacle_seq start with 1000;
 create sequence representation_seq start with 1000;
 
-insert into spectacle values (1,'Balckangel', 'VALLIN', 'Jeremy', 'M');
-insert into spectacle values (2,'Rafoufoun', 'PANOYAN', 'Rafi', 'M');
-insert into spectacle values (3,'SebLaChaude', 'CHANAL', 'Sebastien', 'M');
-insert into spectacle values (4,'Bibiche', 'PEREAU', 'Clara', 'F');
-insert into spectacle values (5,'Loulou', 'DUPONTAI', 'Louise', 'F');
-insert into spectacle values (6,'Robert', 'SAIRIEN', 'Jean', 'M');
-insert into spectacle values (7,'Boobs', 'BAR', 'Leny', 'M');
-insert into spectacle values (8,'Doremi', 'DEAU', 'Remy', 'M');
-insert into spectacle values (9,'Juju', 'DUFRANC', 'Justine', 'F');
-insert into spectacle values (10,'Tounu', 'NIPANTALON', 'Sandra', 'F');
-insert into spectacle values (11,'Pamoi', 'PAFAISA', 'Jenna', 'F');
+insert into geek values (1,'Balckangel', 'VALLIN', 'Jeremy', 'M');
+insert into geek values (2,'Rafoufoun', 'PANOYAN', 'Rafi', 'M');
+insert into geek values (3,'SebLaChaude', 'CHANAL', 'Sebastien', 'M');
+insert into geek values (4,'Bibiche', 'PEREAU', 'Clara', 'F');
+insert into geek values (5,'Loulou', 'DUPONTAI', 'Louise', 'F');
+insert into geek values (6,'Robert', 'SAIRIEN', 'Jean', 'M');
+insert into geek values (7,'Boobs', 'BAR', 'Leny', 'M');
+insert into geek values (8,'Doremi', 'DEAU', 'Remy', 'M');
+insert into geek values (9,'Juju', 'DUFRANC', 'Justine', 'F');
+insert into geek values (10,'Tounu', 'NIPANTALON', 'Sandra', 'F');
+insert into geek values (11,'Pamoi', 'PAFAISA', 'Jenna', 'F');

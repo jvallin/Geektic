@@ -29,7 +29,7 @@ public class Representation {
 	
 	@ManyToOne
 	@JoinColumn(name = "id_spectacle", nullable = false)
-	private Spectacle spectacle;
+	private Geek geek;
 
 	public Long getId() {
 		return id;
@@ -55,11 +55,11 @@ public class Representation {
 		this.date = date;
 	}
 
-	public Spectacle getSpectacle() {
-		return spectacle;
+	public Geek getSpectacle() {
+		return geek;
 	}
 
-	public void setSpectacle(Spectacle spectacle) {
-		this.spectacle = spectacle;
+	public void setSpectacle(Geek geek) {
+		this.geek = geek;
 	}
 }

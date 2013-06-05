@@ -2,17 +2,17 @@ package fr.jvallin.service;
 
 import java.util.List;
 
-import fr.jvallin.model.Spectacle;
+import fr.jvallin.model.Geek;
 
 public interface IService
 {
-	public List<Spectacle> findByPseudo(String pseudo);
+	public List<Geek> findByPseudo(String pseudo);
 	
 	public void creer(String pseudo, String nom, String sexe);
 	
-	public List<Spectacle> findAll();
+	public List<Geek> findAll();
 	
-	public Spectacle findById(String id);
+	public Geek findById(String id);
 	
-	public List<Spectacle> findBySexe(String sexe);
+	public List<Geek> findBySexe(String sexe);
 }

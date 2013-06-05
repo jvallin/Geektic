@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import fr.jvallin.dao.GeekDao;
-import fr.jvallin.model.Spectacle;
+import fr.jvallin.model.Geek;
 
 
 @Service
@@ -22,30 +22,30 @@ public class ServiceGeek implements IService
 		this.dao = dao;
 	}
 	
-	public List<Spectacle> findByPseudo(String pseudo)
+	public List<Geek> findByPseudo(String pseudo)
 	{
 		return dao.findByPseudo(pseudo);
 	}
 		
-	// Méthode pour ajouter un Spectacle
+	// Méthode pour ajouter un Geek
 	public void creer(String pseudo, String nom, String sexe)
 	{		
-		dao.persist(new Spectacle(pseudo, nom, sexe));
+		dao.persist(new Geek(pseudo, nom, sexe));
 	}
 	
-	public List<Spectacle> findAll()
+	public List<Geek> findAll()
 	{
 		return dao.findAll();
 	}
 	
-	public Spectacle findById(String id)
+	public Geek findById(String id)
 	{
 		Long temp = Long.parseLong(id);
 		
 		return dao.findById(temp);
 	}
 	
-	public List<Spectacle> findBySexe(String sexe)
+	public List<Geek> findBySexe(String sexe)
 	{
 		return dao.findBySexe(sexe);
 	}

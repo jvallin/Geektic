@@ -7,7 +7,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Component;
 
-import fr.jvallin.model.Spectacle;
+import fr.jvallin.model.Geek;
 
 
 @Component
@@ -24,45 +24,45 @@ public class GeekDao {
 		this.em = em;
 	}
 	
-	public List<Spectacle> findAll() {
-		String jpql = "select g from Spectacle g order by g.pseudo";
-		return em.createQuery(jpql, Spectacle.class).getResultList();
+	public List<Geek> findAll() {
+		String jpql = "select g from Geek g order by g.pseudo";
+		return em.createQuery(jpql, Geek.class).getResultList();
 	}
 	
-	public void persist(Spectacle spectacle) {
-		em.persist(spectacle);
+	public void persist(Geek geek) {
+		em.persist(geek);
 	}
 	
-	public Spectacle findById(Long id) {
-		return em.find(Spectacle.class, id);
+	public Geek findById(Long id) {
+		return em.find(Geek.class, id);
 	}
 	
-	public List<Spectacle> findByNom(String nom) {
+	public List<Geek> findByNom(String nom) {
 		String jpql = 
-			"select g from Spectacle g"
+			"select g from Geek g"
 			+ " where lower(g.nom) like :nom"
 			+ " order by g.pseudo";
-		return em.createQuery(jpql, Spectacle.class)
+		return em.createQuery(jpql, Geek.class)
 				 .setParameter("nom", "%" + nom.toLowerCase() + "%")
 				 .getResultList();
 	}
 	
-	public List<Spectacle> findByPseudo(String pseudo) {
+	public List<Geek> findByPseudo(String pseudo) {
 		String jpql = 
-			"select g from Spectacle g"
+			"select g from Geek g"
 			+ " where lower(g.pseudo) like :pseudo"
 			+ " order by g.pseudo";
-		return em.createQuery(jpql, Spectacle.class)
+		return em.createQuery(jpql, Geek.class)
 				 .setParameter("pseudo", "%" + pseudo.toLowerCase() + "%")
 				 .getResultList();
 	}
 	
-	public List<Spectacle> findBySexe(String sexe) {
+	public List<Geek> findBySexe(String sexe) {
 		String jpql = 
-			"select g from Spectacle g"
+			"select g from Geek g"
 			+ " where lower(g.sexe) like :sexe"
 			+ " order by g.pseudo";
-		return em.createQuery(jpql, Spectacle.class)
+		return em.createQuery(jpql, Geek.class)
 				 .setParameter("sexe", "%" + sexe.toLowerCase() + "%")
 				 .getResultList();
 	}

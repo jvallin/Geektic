@@ -12,7 +12,7 @@ import javax.persistence.criteria.Root;
 import fr.jvallin.model.Representation;
 import fr.jvallin.model.RepresentationSearchCriteria;
 import fr.jvallin.model.Interet_;
-import fr.jvallin.model.Spectacle;
+import fr.jvallin.model.Geek;
 import fr.jvallin.model.Geek_;
 
 public class RepresentationDao {
@@ -26,13 +26,13 @@ public class RepresentationDao {
 		CriteriaBuilder cb = em.getCriteriaBuilder();
 		CriteriaQuery<Representation> cq = cb.createQuery(Representation.class);
 		Root<Representation> representation = cq.from(Representation.class);
-		Path<Spectacle> spectacle = representation.join(Interet_.spectacle);
+		Path<Geek> geek = representation.join(Interet_.geek);
 		Predicate dateAfter = cb.greaterThanOrEqualTo(representation.get(Interet_.date), criteria.getDateDebut());
 		Predicate dateBefore = cb.lessThanOrEqualTo(representation.get(Interet_.date), criteria.getDateFin());
-		Predicate likeNom = cb.like(cb.lower(spectacle.get(Geek_.nom)), "%" + criteria.getArtiste().toLowerCase() + "%");
+		Predicate likeNom = cb.like(cb.lower(geek.get(Geek_.nom)), "%" + criteria.getArtiste().toLowerCase() + "%");
 		
 		cq.where(dateBefore, dateAfter, likeNom);
-		representation.fetch(Interet_.spectacle);
+		representation.fetch(Interet_.geek);
 		cq.select(representation).orderBy(cb.asc(representation.get(Interet_.date)));
 		return em.createQuery(cq).getResultList();
 	}
@@ -40,10 +40,10 @@ public class RepresentationDao {
 	public List<Representation> findByCriteriaUsingJPQL(RepresentationSearchCriteria criteria) {
 		String jpql = 
 			"select representation from Representation representation"
-			+ " inner join fetch representation.spectacle spectacle"
+			+ " inner join fetch representation.spectacle geek"
 			+ " where representation.date >= :dateDebut"
 			+ " and representation.date <= :dateFin"
-			+ " and lower(spectacle.artiste) like :artiste"
+			+ " and lower(geek.artiste) like :artiste"
 			+ " order by representation.date";
 		return em.createQuery(jpql, Representation.class)
 				 .setParameter("dateDebut", criteria.getDateDebut())

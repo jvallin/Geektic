@@ -11,5 +11,5 @@ public class Interet_ {
 	public static volatile SingularAttribute<Representation, Long> id;
 	public static volatile SingularAttribute<Representation, Date> date;
 	public static volatile SingularAttribute<Representation, String> libelle;
-	public static volatile SingularAttribute<Representation, Spectacle> spectacle;
+	public static volatile SingularAttribute<Representation, Geek> geek;
 }

@@ -15,7 +15,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import fr.jvallin.dao.GeekDao;
-import fr.jvallin.model.Spectacle;
+import fr.jvallin.model.Geek;
 
 public class TestService
 {
@@ -48,26 +48,26 @@ public class TestService
     
     @Test
     public void testFindByPseudoCompletBalckangel() {
-        List<Spectacle> listeGeek = dao.findByPseudo("Balckangel");
+        List<Geek> listeGeek = dao.findByPseudo("Balckangel");
         assertEquals(1, listeGeek.size());
         assertEquals(1L, listeGeek.get(0).getId().longValue());
     }
     
     @Test
     public void testFindByPseudoLikeou() {
-        List<Spectacle> listeGeek = dao.findByPseudo("ou");
+        List<Geek> listeGeek = dao.findByPseudo("ou");
         assertEquals(3, listeGeek.size());
     }
     
     @Test
     public void testFindById1() {
-        Spectacle geek = dao.findById(1L);
+        Geek geek = dao.findById(1L);
         assertEquals("Balckangel", geek.getPseudo());
     }
     
     @Test
     public void testFindBySexeM() {
-    	List<Spectacle> listeGeek = dao.findBySexe("M");
+    	List<Geek> listeGeek = dao.findBySexe("M");
     	assertEquals(6, listeGeek.size());
     }
 }
