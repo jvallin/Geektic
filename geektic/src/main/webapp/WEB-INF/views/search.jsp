@@ -35,7 +35,7 @@
 			<br/>
 			<form method="GET" action="searchJDLC">
 				<center>
-					<input type="submit" id="b_jdlc" name="jdlc" value="J'ai de la chance !">
+					<input type="submit" id="b_jdlc" name="jdlc" value="Au hasard !">
 				</center>
 			</form>
 		</div>
