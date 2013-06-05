@@ -15,4 +15,6 @@ public interface IService
 	public Geek findById(String id);
 	
 	public List<Geek> findBySexe(String sexe);
+	
+	public void updateNbVus(Geek geek);
 }

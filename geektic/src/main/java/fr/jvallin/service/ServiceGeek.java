@@ -49,4 +49,9 @@ public class ServiceGeek implements IService
 	{
 		return dao.findBySexe(sexe);
 	}
+	
+	public void updateNbVus(Geek geek)
+	{
+		dao.persist(geek);
+	}
 }

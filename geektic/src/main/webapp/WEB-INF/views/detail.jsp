@@ -9,13 +9,15 @@
 	<body>
 		<header> </header>
 		<div id="result">
-			<h2><c:out value="${geeks.pseudo}"/></h2>
+			<h2><c:out value="${geek.pseudo}"/></h2>
 			
-			Nom : <c:out value="${geeks.nom}"/>
+			Nom : <c:out value="${geek.nom}"/>
 			<br/>
-			Prenom : <c:out value="${geeks.prenom}"/>
+			Prenom : <c:out value="${geek.prenom}"/>
 			<br/>
-			Sexe : <c:out value="${geeks.sexe}"/>			
+			Sexe : <c:out value="${geek.sexe}"/>			
+			<br/>
+			Nombre de vues : <c:out value="${geek.nbvus}"/>			
 			<br/>
 			
 			<h2><a href="<c:url value='/'/>">Retour à la page de recherche</a></h2>

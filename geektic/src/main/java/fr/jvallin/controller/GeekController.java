@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import fr.jvallin.model.Geek;
 import fr.jvallin.service.IService;
 
 @Controller
@@ -63,7 +64,7 @@ public class GeekController
 		String id = random+"";
 		
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("geeks", service.findById(id));
+		mv.addObject("geek", service.findById(id));
 		mv.setViewName("detail");
 		
 		return mv;
@@ -73,8 +74,14 @@ public class GeekController
 	@RequestMapping(value = "detail", method = RequestMethod.GET)
 	public ModelAndView showDetail(@RequestParam(required = true, value="id") String id)
 	{
+		Geek geek = service.findById(id);
+		
+		geek.setNbvus(geek.getNbvus()+1);
+		
+		service.updateNbVus(geek);
+		
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("geeks", service.findById(id));
+		mv.addObject("geek", geek);
 		mv.setViewName("detail");
 		
 		return mv;
