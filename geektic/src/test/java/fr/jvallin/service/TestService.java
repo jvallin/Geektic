@@ -54,6 +54,20 @@ public class TestService
     }
     
     @Test
-    public void test() {
+    public void testFindByPseudoLikeou() {
+        List<Spectacle> listeGeek = dao.findByTitre("ou");
+        assertEquals(3, listeGeek.size());
+    }
+    
+    @Test
+    public void testFindById1() {
+        Spectacle geek = dao.findById(1L);
+        assertEquals("Balckangel", geek.getTitre());
+    }
+    
+    @Test
+    public void testFindBySexeM() {
+    	List<Spectacle> listeGeek = dao.findBySexe("M");
+    	assertEquals(6, listeGeek.size());
     }
 }
