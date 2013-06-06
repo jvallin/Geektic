@@ -82,6 +82,7 @@ public class GeekDao {
 		String jpql = 
 			"select g from Geek g"
 			+ " where lower(g.sexe) like :sexe"
+			+ " and lower.(g.interet) in ('JAVA')"
 			+ " order by g.pseudo";
 		return em.createQuery(jpql, Geek.class)
 				 .setParameter("sexe", "%" + sexe.toLowerCase() + "%")

@@ -16,5 +16,7 @@ public interface IService
 	
 	public List<Geek> findBySexe(String sexe);
 	
+	public List<Geek> findByInteret(String sexe, String[] interets);
+	
 	public void updateNbVus(Geek geek);
 }
