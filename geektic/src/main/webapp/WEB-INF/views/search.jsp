@@ -22,9 +22,9 @@
 			<form method="GET" action="searchSexe">
 				<fieldset><legend>&nbsp;... ou recherchez par sexe&nbsp;</legend>
 					<div id="sexe">
-						<input type="radio" name="radioBouton" value="M"><img src="img/geek.gif" alt="Geek" height="20%" width="20%">Geek<br/><br/>
-						<input type="radio" name="radioBouton" value="F"><img src="img/geekette.gif" alt="Geekette" height="20%" width="20%">Geekette<br/><br/>  
-						<input type="radio" name="radioBouton" value="D" checked><img src="img/deux.gif" alt="Les deux" height="20%" width="20%">Les deux 
+						<input id="r_b" type="radio" name="radioBouton" value="M"><img src="img/geek.gif" alt="Geek" height="20%" width="20%">Geek<br/><br/>
+						<input id="r_b" type="radio" name="radioBouton" value="F"><img src="img/geekette.gif" alt="Geekette" height="20%" width="20%">Geekette<br/><br/>  
+						<input id="r_b" type="radio" name="radioBouton" value="D" checked><img src="img/deux.gif" alt="Les deux" height="20%" width="20%">Les deux 
 					</div>
 					
 					<div id="ci">
