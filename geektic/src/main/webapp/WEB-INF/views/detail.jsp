@@ -10,26 +10,27 @@
 		<header> </header>
 		<div id="result">
 			<h2><c:out value="${geek.pseudo}"/></h2>
-			
-			Nom : <c:out value="${geek.nom}"/>
-			<br/>
-			Prenom : <c:out value="${geek.prenom}"/>
-			<br/>
-			Sexe : 	<c:choose>
-			    		<c:when test="${geek.sexe == 'M'}">
-				    		<img src="img/geek.gif" alt="Geek" height="4%" width="4%">	
-				    	</c:when>
-				    	<c:when test="${geek.sexe == 'F'}">
-				    		<img src="img/geekette.gif" alt="Geekette" height="4%" width="4%">
-				    	</c:when>
-					</c:choose>			
-			<br/>
-			Nombre de vues : <c:out value="${geek.nbvus}"/>			
-			<br/>
-			Interet(s) : 	<c:forEach var="interet" items="${geek.interets}">
-								<input type="checkbox" disabled checked><c:out value="${interet.libelle}"></c:out>			
-							</c:forEach>	
-			<br/>
+			<table id="liste">
+				<tr><td>Nom : </td><td><c:out value="${geek.nom}"/></td></tr>
+				
+				<tr><td>Prenom : </td><td><c:out value="${geek.prenom}"/></td></tr>
+				
+				<tr><td>Sexe : 	</td><td><c:choose>
+					    		<c:when test="${geek.sexe == 'M'}">
+						    		<img src="img/geek.gif" alt="Geek" height="15%" width="15%">	
+						    	</c:when>
+						    	<c:when test="${geek.sexe == 'F'}">
+						    		<img src="img/geekette.gif" alt="Geekette" height="15%" width="15%">
+						    	</c:when>
+							</c:choose></td></tr>		
+							
+				<tr><td>Nombre de vues : </td><td><c:out value="${geek.nbvus}"/></td></tr>		
+					
+				<tr><td>Interet(s) : 	</td></tr><c:forEach var="interet" items="${geek.interets}">
+										<tr><td></td><td><input type="checkbox" disabled checked><c:out value="${interet.libelle}"></c:out></td></tr>	
+									</c:forEach>	
+									
+			</table>
 			
 			<h2><a href="<c:url value='/'/>">Retour à la page de recherche</a></h2>
 		</div>
