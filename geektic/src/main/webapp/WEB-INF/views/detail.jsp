@@ -26,6 +26,8 @@
 			<br/>
 			Nombre de vues : <c:out value="${geek.nbvus}"/>			
 			<br/>
+			Interet(s) : <c:out value="${geek.interets}"/>			
+			<br/>
 			
 			<h2><a href="<c:url value='/'/>">Retour à la page de recherche</a></h2>
 		</div>

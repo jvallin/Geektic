@@ -1,9 +1,14 @@
 package fr.jvallin.model;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 
@@ -27,6 +32,9 @@ public class Geek {
 	private String sexe;
 	
 	private int nbvus;
+	
+	@OneToMany(mappedBy = "geek")
+	private Set<Interet> interets = new HashSet<>(0);
 	
 	public Geek() {
 	}
@@ -83,5 +91,14 @@ public class Geek {
 
 	public void setNbvus(int nbvus) {
 		this.nbvus = nbvus;
+	}
+	
+	public Set<Interet> getInterets() {
+		return Collections.unmodifiableSet(interets);
+	}
+	
+	public void addInteret(Interet representation) {
+		representation.setGeek(this);
+		interets.add(representation);
 	}
 }
