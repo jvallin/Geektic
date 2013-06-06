@@ -17,6 +17,18 @@ fieldset{
 	border-style:double;
 }
 
+#liste{
+	margin: auto;
+}
+
+#tdListe{
+	width: 50px;
+}
+
+img{
+	vertical-align: middle;
+}
+
 #contenu{
 	margin: 50 100 0 100;
 }

@@ -22,28 +22,28 @@
 			<form method="GET" action="searchSexe">
 				<fieldset><legend><h1>&nbsp;... ou recherchez par sexe&nbsp;</h1></legend>
 					<div id="sexe">
-						<input type="radio" name="radioBouton" value="M"><img src="img/geek.gif" alt="Geek" height="20%" width="20%">Geek</br></br>
-						<input type="radio" name="radioBouton" value="F"><img src="img/geekette.gif" alt="Geekette" height="20%" width="20%">Geekette</br></br>  
+						<input type="radio" name="radioBouton" value="M"><img src="img/geek.gif" alt="Geek" height="20%" width="20%">Geek<br/><br/>
+						<input type="radio" name="radioBouton" value="F"><img src="img/geekette.gif" alt="Geekette" height="20%" width="20%">Geekette<br/><br/>  
 						<input type="radio" name="radioBouton" value="D" checked><img src="img/deux.gif" alt="Les deux" height="20%" width="20%">Les deux 
 					</div>
 					
 					<div id="ci">
 					<table>
 						<tr>
-							<td><input id="combo" type="checkbox" name="combo" value="1">HTML</td>
-							<td><input id="combo" type="checkbox" name="combo" value="2">CSS</td>
-							<td><input id="combo" type="checkbox" name="combo" value="3">PHP</td>
-							<td><input id="combo" type="checkbox" name="combo" value="4">JS</td>
+							<td><input id="combo" type="checkbox" name="combo" value="HTML">HTML</td>
+							<td><input id="combo" type="checkbox" name="combo" value="CSS">CSS</td>
+							<td><input id="combo" type="checkbox" name="combo" value="PHP">PHP</td>
+							<td><input id="combo" type="checkbox" name="combo" value="JS">JS</td>
 						</tr>
 						<tr>
-							<td><input id="combo" type="checkbox" name="combo" value="5">JAVA</td>
-							<td><input id="combo" type="checkbox" name="combo" value="6">C</td>
-							<td><input id="combo" type="checkbox" name="combo" value="7">C++</td>
-							<td><input id="combo" type="checkbox" name="combo" value="8">C#</td>
+							<td><input id="combo" type="checkbox" name="combo" value="JAVA">JAVA</td>
+							<td><input id="combo" type="checkbox" name="combo" value="C">C</td>
+							<td><input id="combo" type="checkbox" name="combo" value="CPP">C++</td>
+							<td><input id="combo" type="checkbox" name="combo" value="CS">C#</td>
 						</tr>					
 						<tr>
-							<td><input id="combo" type="checkbox" name="combo" value="9">JUnit</td>
-							<td><input id="combo" type="checkbox" name="combo" value="10">Mockito</td>
+							<td><input id="combo" type="checkbox" name="combo" value="JUnit">JUnit</td>
+							<td><input id="combo" type="checkbox" name="combo" value="Mockito">Mockito</td>
 							<td></td>
 							<td></td>
 						</tr>

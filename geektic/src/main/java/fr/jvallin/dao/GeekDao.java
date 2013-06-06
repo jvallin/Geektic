@@ -66,4 +66,25 @@ public class GeekDao {
 				 .setParameter("sexe", "%" + sexe.toLowerCase() + "%")
 				 .getResultList();
 	}
+	
+	public List<Geek> findByInteret(String sexe, String[] interets) {
+		
+		String interet = "";
+		
+		for(int i=0; i<interets.length-1; i++)
+		{
+			interet += interets[i];
+			interet += ", ";
+		}
+		
+		interet += interets[interets.length];
+		
+		String jpql = 
+			"select g from Geek g"
+			+ " where lower(g.sexe) like :sexe"
+			+ " order by g.pseudo";
+		return em.createQuery(jpql, Geek.class)
+				 .setParameter("sexe", "%" + sexe.toLowerCase() + "%")
+				 .getResultList();
+	}
 }

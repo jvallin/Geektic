@@ -15,7 +15,14 @@
 			<br/>
 			Prenom : <c:out value="${geek.prenom}"/>
 			<br/>
-			Sexe : <c:out value="${geek.sexe}"/>			
+			Sexe : 	<c:choose>
+			    		<c:when test="${geek.sexe == 'M'}">
+				    		<img src="img/geek.gif" alt="Geek" height="4%" width="4%">	
+				    	</c:when>
+				    	<c:when test="${geek.sexe == 'F'}">
+				    		<img src="img/geekette.gif" alt="Geekette" height="4%" width="4%">
+				    	</c:when>
+					</c:choose>			
 			<br/>
 			Nombre de vues : <c:out value="${geek.nbvus}"/>			
 			<br/>

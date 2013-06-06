@@ -40,7 +40,7 @@ public class GeekController
 	
 	
 	@RequestMapping(value = "searchSexe", method = RequestMethod.GET)
-	public ModelAndView showSearchSexe(@RequestParam String radioBouton)
+	public ModelAndView showSearchSexe(@RequestParam String radioBouton, String[] combo)
 	{
 		ModelAndView mv = new ModelAndView();
 		if(radioBouton.equals("D"))
