@@ -26,7 +26,9 @@
 			<br/>
 			Nombre de vues : <c:out value="${geek.nbvus}"/>			
 			<br/>
-			Interet(s) : <c:out value="${geek.interets}"/>			
+			Interet(s) : 	<c:forEach var="interet" items="${geek.interets}">
+								<input type="checkbox" disabled checked><c:out value="${interet.libelle}"></c:out>			
+							</c:forEach>	
 			<br/>
 			
 			<h2><a href="<c:url value='/'/>">Retour à la page de recherche</a></h2>
