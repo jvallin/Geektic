@@ -1,6 +1,5 @@
-drop table spectacle if exists cascade;
-drop sequence spectacle_seq if exists;
-drop sequence representation_seq if exists;
+drop table geek if exists cascade;
+drop sequence geek_seq if exists;
 
 create table geek (
 	id numeric not null,
@@ -12,16 +11,7 @@ create table geek (
 	primary key (id)
 );
 
-create table representation (
-	id numeric not null,
-	date_representation timestamp not null,
-	id_spectacle numeric not null,
-	primary key (id),
-	foreign key (id_spectacle) references spectacle(id)
-);
-
-create sequence spectacle_seq start with 1000;
-create sequence representation_seq start with 1000;
+create sequence geek_seq start with 1000;
 
 insert into geek values (1,'Balckangel', 'VALLIN', 'Jeremy', 'M', 0);
 insert into geek values (2,'Rafoufoun', 'PANOYAN', 'Rafi', 'M', 0);
@@ -34,3 +24,7 @@ insert into geek values (8,'Doremi', 'DEAU', 'Remy', 'M', 0);
 insert into geek values (9,'Juju', 'DUFRANC', 'Justine', 'F', 0);
 insert into geek values (10,'Tounu', 'NIPANTALON', 'Sandra', 'F', 0);
 insert into geek values (11,'Pamoi', 'PAFAISA', 'Jenna', 'F', 0);
+insert into geek values('12', 'acrepet', 'CREPET', 'Agnes', 'F', '100');
+insert into geek values('13', 'cexbrayat', 'EXBRAYAT', 'Cedric', 'M', '100');
+insert into geek values('14', 'clacote', 'LACOTE', 'Cyril', 'M', '100');
+insert into geek values('15', 'jnizet', 'NIZET', 'JeanBaptiste', 'M', '100');

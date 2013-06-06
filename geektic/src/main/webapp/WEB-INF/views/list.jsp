@@ -16,14 +16,14 @@
 					<c:forEach var="geek" items="${geeks}">
 				    	<tr>
 				    		<td id="tdListe">
-				    		<c:choose>
-					    		<c:when test="${geek.sexe == 'M'}">
-						    		<img src="img/geek.gif" alt="Geek" height="100%" width="100%">	
-						    	</c:when>
-						    	<c:when test="${geek.sexe == 'F'}">
-						    		<img src="img/geekette.gif" alt="Geekette" height="100%" width="100%">
-						    	</c:when>
-							</c:choose>							
+					    		<c:choose>
+						    		<c:when test="${geek.sexe == 'M'}">
+							    		<img src="img/geek.gif" alt="Geek" height="100%" width="100%">	
+							    	</c:when>
+							    	<c:when test="${geek.sexe == 'F'}">
+							    		<img src="img/geekette.gif" alt="Geekette" height="100%" width="100%">
+							    	</c:when>
+								</c:choose>							
 				    		</td>
 				    		<td><c:out value="${geek.pseudo}"/></td>
 				    		<td><a href="<c:url value='/detail'><c:param name='id' value='${geek.id}' /></c:url>">Voir le profil</a></td>

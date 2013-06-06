@@ -63,8 +63,10 @@ public class GeekController
 		
 		String id = random+"";
 		
+		Geek geek = updateNbVus(id);
+		
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("geek", service.findById(id));
+		mv.addObject("geek", geek);
 		mv.setViewName("detail");
 		
 		return mv;
@@ -74,16 +76,23 @@ public class GeekController
 	@RequestMapping(value = "detail", method = RequestMethod.GET)
 	public ModelAndView showDetail(@RequestParam(required = true, value="id") String id)
 	{
-		Geek geek = service.findById(id);
-		
-		geek.setNbvus(geek.getNbvus()+1);
-		
-		service.updateNbVus(geek);
+		Geek geek = updateNbVus(id);
 		
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("geek", geek);
 		mv.setViewName("detail");
 		
 		return mv;
+	}
+	
+	public Geek updateNbVus(String id)
+	{
+		Geek geek = service.findById(id);
+		
+		geek.setNbvus(geek.getNbvus()+1);
+		
+		service.updateNbVus(geek);
+		
+		return geek;
 	}
 }

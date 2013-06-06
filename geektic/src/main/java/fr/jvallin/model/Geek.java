@@ -14,8 +14,8 @@ import javax.persistence.SequenceGenerator;
 public class Geek {
 
 	@Id
-	@SequenceGenerator(name = "spectacle_generator", sequenceName = "SPECTACLE_SEQ", allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "spectacle_generator")
+	@SequenceGenerator(name = "geek_generator", sequenceName = "GEEK_SEQ", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "geek_generator")
 	private Long id;
 	
 	private String pseudo;
