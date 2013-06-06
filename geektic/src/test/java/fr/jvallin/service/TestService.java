@@ -25,7 +25,7 @@ public class TestService
     
     @BeforeClass
     public static void setUpBeforeClass() throws Exception {
-        emFactory = Persistence.createEntityManagerFactory("TP_JPA");
+        emFactory = Persistence.createEntityManagerFactory("GEEKTIC");
     }
 
     @AfterClass
@@ -68,6 +68,6 @@ public class TestService
     @Test
     public void testFindBySexeM() {
     	List<Geek> listeGeek = dao.findBySexe("M");
-    	assertEquals(6, listeGeek.size());
+    	assertEquals(9, listeGeek.size());
     }
 }
