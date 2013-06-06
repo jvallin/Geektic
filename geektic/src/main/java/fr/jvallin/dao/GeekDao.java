@@ -69,7 +69,7 @@ public class GeekDao {
 	
 	public List<Geek> findByInteret(String sexe, String[] interets) {
 		
-		String interet = "";
+		/*String interet = "";
 		
 		for(int i=0; i<interets.length-1; i++)
 		{
@@ -77,7 +77,7 @@ public class GeekDao {
 			interet += ", ";
 		}
 		
-		interet += interets[interets.length];
+		interet += interets[interets.length];*/
 		
 		String jpql = 
 			"select g from Geek g"

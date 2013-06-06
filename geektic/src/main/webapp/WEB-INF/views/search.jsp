@@ -13,14 +13,14 @@
 	
 			<form method="GET" action="searchPseudo">
 				<fieldset>
-					<legend><h1>&nbsp;Entrez le pseudo du geek ou de la geekette ...&nbsp;</h1></legend>
+					<legend>&nbsp;Entrez le pseudo du geek ou de la geekette ...&nbsp;</legend>
 					<input type="text" id="champ" name="pseudo">
 					<input type="submit" id="b_rechercher" name="bouton" value="Rechercher">
 				</fieldset>
 			</form>	
 			
 			<form method="GET" action="searchSexe">
-				<fieldset><legend><h1>&nbsp;... ou recherchez par sexe&nbsp;</h1></legend>
+				<fieldset><legend>&nbsp;... ou recherchez par sexe&nbsp;</legend>
 					<div id="sexe">
 						<input type="radio" name="radioBouton" value="M"><img src="img/geek.gif" alt="Geek" height="20%" width="20%">Geek<br/><br/>
 						<input type="radio" name="radioBouton" value="F"><img src="img/geekette.gif" alt="Geekette" height="20%" width="20%">Geekette<br/><br/>  
@@ -59,9 +59,9 @@
 			
 			<br/>
 			<form method="GET" action="searchJDLC">
-				<center>
+				<div id="hasard">
 					<input type="submit" id="b_jdlc" name="jdlc" value="Au hasard !">
-				</center>
+				</div>
 			</form>
 		</div>
 		

@@ -17,6 +17,16 @@ fieldset{
 	border-style:double;
 }
 
+legend{
+	text-align : center;
+	font-size : 40px;
+	font-weight : bold;
+}
+
+img{
+	vertical-align: middle;
+}
+
 #liste{
 	margin: auto;
 }
@@ -25,8 +35,8 @@ fieldset{
 	width: 50px;
 }
 
-img{
-	vertical-align: middle;
+#hasard{
+	text-align: center;
 }
 
 #contenu{
