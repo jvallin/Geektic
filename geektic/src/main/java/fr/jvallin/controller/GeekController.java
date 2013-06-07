@@ -43,7 +43,6 @@ public class GeekController
 	public ModelAndView showSearchSexe(@RequestParam String radioBouton, String[] combo)
 	{
 		ModelAndView mv = new ModelAndView();
-		//mv.addObject("geeks", service.findBySexe(radioBouton));
 		mv.addObject("geeks", service.findByInteret(radioBouton, combo));
 		mv.setViewName("list");
 		
@@ -79,6 +78,7 @@ public class GeekController
 		return mv;
 	}
 	
+	// méthode qui gère le nombre de vues
 	public Geek updateNbVus(String id)
 	{
 		Geek geek = service.findById(id);

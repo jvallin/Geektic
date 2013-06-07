@@ -88,7 +88,7 @@ public class GeekDao {
 		{
 			jpql += " join g.interets i";
 			jpql += " where lower(i.libelle) in (:interet) ";
-			if(!sexe.equals("D")) // si un sexe est renseigné
+			if(!sexe.equals("D")) // si un sexe est spécifié
 			{
 				jpql += " and lower(g.sexe) = :sexe";
 				jpql += " order by g.pseudo";
@@ -105,7 +105,7 @@ public class GeekDao {
 		}		
 		else
 		{
-			if(!sexe.equals("D")) // si un sexe est renseigné
+			if(!sexe.equals("D")) // si un sexe est spécifié
 			{
 				jpql += " where lower(g.sexe) = :sexe";
 				
