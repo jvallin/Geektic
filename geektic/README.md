@@ -25,3 +25,5 @@ Chaque geek possède un pseudo, un nom, un prenom, un sexe et un nombre de vues q
 
 Deux petites étoiles s'affichent à coté du pseudo dans la page détail si le profil affiché est le plus visité.
 
+BUG : si l'utilisateur choisi plus d'un interet ... la requete ne fonctionne pas.
+

@@ -80,12 +80,14 @@ public class GeekDao {
 		{
 			for(int i=0; i<listInterets.length-1; i++)
 			{
-				interets += listInterets[i];
-				interets += ", ";
+				interets += ""+listInterets[i]+"";
+				interets += ",";
 			}
 			
-			interets += listInterets[listInterets.length-1] + "";
+			interets += ""+listInterets[listInterets.length-1] + "";
 		}
+		
+		System.out.println(interets);
 		
 		String jpql = "select g from Geek g";		
 		
@@ -104,9 +106,12 @@ public class GeekDao {
 	   		}
 			
 			jpql += " order by g.pseudo";
-			return em.createQuery(jpql, Geek.class)	
+			
+			List<Geek> liste = em.createQuery(jpql, Geek.class)	
 					 .setParameter("interet", "" + interets.toLowerCase() + "")		
 					 .getResultList();
+			System.out.println(liste);
+			return liste;
 		}		
 		else
 		{
@@ -123,6 +128,6 @@ public class GeekDao {
 			jpql += " order by g.pseudo";
 			return em.createQuery(jpql, Geek.class)
 					 .getResultList();
-		}		
+		}
 	}
 }
