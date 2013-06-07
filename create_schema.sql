@@ -24,7 +24,7 @@ create table interet (
 create sequence geek_seq start with 1000;
 create sequence interet_seq start with 1000;
 
-insert into geek values (1,'Balckangel', 'VALLIN', 'Jeremy', 'H', 0);
+insert into geek values (1,'Balckangel', 'VALLIN', 'Jeremy', 'H', 100);
 insert into geek values (2,'Rafoufoun', 'PANOYAN', 'Rafi', 'H', 0);
 insert into geek values (3,'SebLaChaude', 'CHANAL', 'Sebastien', 'H', 0);
 insert into geek values (4,'Bibiche', 'PEREAU', 'Clara', 'F', 0);
@@ -35,11 +35,10 @@ insert into geek values (8,'Doremi', 'DEAU', 'Remy', 'H', 0);
 insert into geek values (9,'Juju', 'DUFRANC', 'Justine', 'F', 0);
 insert into geek values (10,'Tounu', 'NIPANTALON', 'Sandra', 'F', 0);
 insert into geek values (11,'Pamoi', 'PAFAISA', 'Jenna', 'F', 0);
-insert into geek values('12', 'Acrepet', 'CREPET', 'Agnes', 'F', '100');
-insert into geek values('13', 'Cexbrayat', 'EXBRAYAT', 'Cedric', 'H', '100');
-insert into geek values('14', 'Clacote', 'LACOTE', 'Cyril', 'H', '100');
-insert into geek values('15', 'Jnizet', 'NIZET', 'JeanBaptiste', 'H', '100');
-insert into geek values('16', 'Gtous', 'jaitous', 'lesinterets', 'F', '0');
+insert into geek values('12', 'Acrepet', 'CREPET', 'Agnes', 'F', 100);
+insert into geek values('13', 'Cexbrayat', 'EXBRAYAT', 'Cedric', 'H', 100);
+insert into geek values('14', 'Clacote', 'LACOTE', 'Cyril', 'H', 100);
+insert into geek values('15', 'Jnizet', 'NIZET', 'JeanBaptiste', 'H', 100);
 
 insert into interet values (1, 1, 'JAVA');
 insert into interet values (2, 1, 'JUnit');
@@ -75,13 +74,3 @@ insert into interet values (31, 14, 'JUnit');
 insert into interet values (32, 15, 'C');
 insert into interet values (33, 15, 'C++');
 insert into interet values (34, 15, 'Mockito');
-insert into interet values (35, 16, 'JAVA');
-insert into interet values (36, 16, 'JUnit');
-insert into interet values (37, 16, 'HTML');
-insert into interet values (38, 16, 'CSS');
-insert into interet values (39, 16, 'PHP');
-insert into interet values (40, 16, 'JS');
-insert into interet values (42, 16, 'C#');
-insert into interet values (43, 16, 'C++');
-insert into interet values (44, 16, 'C');
-insert into interet values (45, 16, 'Mockito');

@@ -60,6 +60,7 @@ public class GeekController
 		
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("geek", geek);
+		mv.addObject("max", service.findMaxVues());
 		mv.setViewName("detail");
 		
 		return mv;
@@ -73,6 +74,7 @@ public class GeekController
 		
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("geek", geek);
+		mv.addObject("max", service.findMaxVues());
 		mv.setViewName("detail");
 		
 		return mv;

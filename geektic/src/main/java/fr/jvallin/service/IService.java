@@ -14,6 +14,8 @@ public interface IService
 	
 	public Geek findById(String id);
 	
+	public Geek findMaxVues();
+	
 	public List<Geek> findBySexe(String sexe);
 	
 	public List<Geek> findByInteret(String sexe, String[] interets);

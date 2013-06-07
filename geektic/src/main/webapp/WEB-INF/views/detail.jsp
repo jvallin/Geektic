@@ -9,7 +9,11 @@
 	<body>
 		<header> </header>
 		<div id="result">
-			<h2><c:out value="${geek.pseudo}"/></h2>
+			<h2>
+				<c:out value="${geek.pseudo}"/> <c:if test="${geek.nbvus == max.nbvus}">
+													<img src="img/etoile.gif" alt="Profil le plus visité" height="5%" width="5%">
+												</c:if>
+			</h2>
 			<table id="liste">
 				<tr><td>Nom : </td><td><c:out value="${geek.nom}"/></td></tr>
 				
@@ -28,7 +32,7 @@
 					
 				<tr><td>Interet(s) : 	</td></tr><c:forEach var="interet" items="${geek.interets}">
 										<tr><td></td><td><input type="checkbox" disabled checked><c:out value="${interet.libelle}"></c:out></td></tr>	
-									</c:forEach>	
+									</c:forEach>
 									
 			</table>
 			

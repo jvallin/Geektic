@@ -47,6 +47,11 @@ public class GeekDao {
 				 .getResultList();
 	}
 	
+	public Geek findMaxVues() {
+		String jpql = "select g from Geek g where g.nbvus = (select max(nbvus) from Geek)";
+		return em.createQuery(jpql, Geek.class).setMaxResults(1).getSingleResult();
+	}
+	
 	public List<Geek> findByPseudo(String pseudo) {
 		String jpql = 
 			"select g from Geek g"
