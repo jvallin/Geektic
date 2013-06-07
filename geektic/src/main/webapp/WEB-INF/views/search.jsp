@@ -18,7 +18,7 @@
 					<input type="submit" id="b_rechercher" name="bouton" value="Rechercher">
 				</fieldset>
 			</form>	
-			
+						
 			<form method="GET" action="searchSexe">
 				<fieldset><legend>&nbsp;... ou recherchez par sexe&nbsp;</legend>
 					<div id="sexe">
