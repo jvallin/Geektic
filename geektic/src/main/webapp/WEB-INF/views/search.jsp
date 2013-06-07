@@ -38,8 +38,8 @@
 						<tr>
 							<td><input id="combo" type="checkbox" name="combo" value="JAVA">JAVA</td>
 							<td><input id="combo" type="checkbox" name="combo" value="C">C</td>
-							<td><input id="combo" type="checkbox" name="combo" value="CPP">C++</td>
-							<td><input id="combo" type="checkbox" name="combo" value="CS">C#</td>
+							<td><input id="combo" type="checkbox" name="combo" value="C++">C++</td>
+							<td><input id="combo" type="checkbox" name="combo" value="C#">C#</td>
 						</tr>					
 						<tr>
 							<td><input id="combo" type="checkbox" name="combo" value="JUnit">JUnit</td>
