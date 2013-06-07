@@ -23,5 +23,5 @@ L'utilisateur peut :
 Chaque geek possède un pseudo, un nom, un prenom, un sexe et un nombre de vues qui augmente à chaque affichage de la page 
 (BUG : si l'utiliseteur "bourine" la touche F5, le nombre de vues augmente à chaque fois)
 
-Une petite étoile s'affiche à coté du pseudo dans la page détail si le profil affiché est le plus visité.
+Deux petites étoiles s'affichent à coté du pseudo dans la page détail si le profil affiché est le plus visité.
 

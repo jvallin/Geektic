@@ -10,9 +10,13 @@
 		<header> </header>
 		<div id="result">
 			<h2>
-				<c:out value="${geek.pseudo}"/> <c:if test="${geek.nbvus == max.nbvus}">
-													<img src="img/etoile.gif" alt="Profil le plus visité" height="5%" width="5%">
-												</c:if>
+				<c:if test="${geek.nbvus == max.nbvus}">
+					<img src="img/etoile.gif" alt="Profil le plus visité" height="5%" width="5%">
+				</c:if>
+				<c:out value="${geek.pseudo}"/>
+				<c:if test="${geek.nbvus == max.nbvus}">
+					<img src="img/etoile.gif" alt="Profil le plus visité" height="5%" width="5%">
+				</c:if>
 			</h2>
 			<table id="liste">
 				<tr><td>Nom : </td><td><c:out value="${geek.nom}"/></td></tr>
