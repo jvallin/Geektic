@@ -16,7 +16,7 @@
 				<tr><td>Prenom : </td><td><c:out value="${geek.prenom}"/></td></tr>
 				
 				<tr><td>Sexe : 	</td><td><c:choose>
-					    		<c:when test="${geek.sexe == 'M'}">
+					    		<c:when test="${geek.sexe == 'H'}">
 						    		<img src="img/geek.gif" alt="Geek" height="15%" width="15%">	
 						    	</c:when>
 						    	<c:when test="${geek.sexe == 'F'}">

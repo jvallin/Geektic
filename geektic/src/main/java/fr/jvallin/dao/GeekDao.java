@@ -67,25 +67,54 @@ public class GeekDao {
 				 .getResultList();
 	}
 	
-	public List<Geek> findByInteret(String sexe, String[] interets) {
+	public List<Geek> findByInteret(String sexe, String[] listInterets) {
 		
-		/*String interet = "";
+		String interets = "";
 		
-		for(int i=0; i<interets.length-1; i++)
+		if(listInterets != null)
 		{
-			interet += interets[i];
-			interet += ", ";
+			for(int i=0; i<listInterets.length-1; i++)
+			{
+				interets += listInterets[i];
+				interets += ", ";
+			}
+			
+			interets += listInterets[listInterets.length-1] + "";
 		}
 		
-		interet += interets[interets.length];*/
+		String jpql = "select g from Geek g";		
 		
-		String jpql = 
-			"select g from Geek g"
-			+ " where lower(g.sexe) like :sexe"
-			+ " and lower.(g.interet) in ('JAVA')"
-			+ " order by g.pseudo";
-		return em.createQuery(jpql, Geek.class)
-				 .setParameter("sexe", "%" + sexe.toLowerCase() + "%")
-				 .getResultList();
+		if(!interets.equals("")) // si il y a au moins un interet
+		{
+			jpql += " join g.interets i";
+			jpql += " where lower(i.libelle) in (:interet) ";
+			if(!sexe.equals("D")) // si un sexe est renseigné
+			{
+				jpql += " and lower(g.sexe) = :sexe";
+				
+				return em.createQuery(jpql, Geek.class)
+						 .setParameter("sexe", "" + sexe.toLowerCase() + "")	
+						 .setParameter("interet", "" + interets.toLowerCase() + "")		
+						 .getResultList();
+	   		}
+			
+			return em.createQuery(jpql, Geek.class)	
+					 .setParameter("interet", "" + interets.toLowerCase() + "")		
+					 .getResultList();
+		}		
+		else
+		{
+			if(!sexe.equals("D")) // si un sexe est renseigné
+			{
+				jpql += " where lower(g.sexe) = :sexe";
+				
+				return em.createQuery(jpql, Geek.class)
+						 .setParameter("sexe", "" + sexe.toLowerCase() + "")		
+						 .getResultList();
+	   		}
+			
+			return em.createQuery(jpql, Geek.class)
+					 .getResultList();
+		}		
 	}
 }

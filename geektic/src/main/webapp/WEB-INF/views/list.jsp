@@ -17,7 +17,7 @@
 				    	<tr>
 				    		<td id="tdListe">
 					    		<c:choose>
-						    		<c:when test="${geek.sexe == 'M'}">
+						    		<c:when test="${geek.sexe == 'H'}">
 							    		<img src="img/geek.gif" alt="Geek" height="100%" width="100%">	
 							    	</c:when>
 							    	<c:when test="${geek.sexe == 'F'}">
@@ -29,6 +29,10 @@
 				    		<td><a href="<c:url value='/detail'><c:param name='id' value='${geek.id}' /></c:url>">Voir le profil</a></td>
 				    	</tr>
 				    </c:forEach>
+				    
+				    <c:if test="${empty geeks}">
+				    	<p>Pas de résultat ... Essayez encore, l'âme soeur n'est pas loin !</p>
+				    </c:if>
 			    </table>
 			    
 			    <br/>

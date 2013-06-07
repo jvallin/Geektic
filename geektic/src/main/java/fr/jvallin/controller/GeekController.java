@@ -43,14 +43,8 @@ public class GeekController
 	public ModelAndView showSearchSexe(@RequestParam String radioBouton, String[] combo)
 	{
 		ModelAndView mv = new ModelAndView();
-		if(radioBouton.equals("D"))
-		{
-			mv.addObject("geeks", service.findAll());
-		}
-		else
-		{
-			mv.addObject("geeks", service.findBySexe(radioBouton));
-		}
+		//mv.addObject("geeks", service.findBySexe(radioBouton));
+		mv.addObject("geeks", service.findByInteret(radioBouton, combo));
 		mv.setViewName("list");
 		
 		return mv;

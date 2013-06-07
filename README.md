@@ -2,7 +2,11 @@
 || GEEKTIC : TP pour J2EE ||
 ============================
 
-Les dossier
+Pre-requis
+===========
+/!\ La base de données doit être lancé AVANT le serveur Tomcat /!\
+
+Les dossiers
 ===============
 Le dossier "geektic" comporte les sources du projet
 Le dossier "geektic BDD" comporte les fichier necessaire pour lancer la base
