@@ -91,13 +91,14 @@ public class GeekDao {
 			if(!sexe.equals("D")) // si un sexe est renseigné
 			{
 				jpql += " and lower(g.sexe) = :sexe";
-				
+				jpql += " order by g.pseudo";
 				return em.createQuery(jpql, Geek.class)
 						 .setParameter("sexe", "" + sexe.toLowerCase() + "")	
 						 .setParameter("interet", "" + interets.toLowerCase() + "")		
 						 .getResultList();
 	   		}
 			
+			jpql += " order by g.pseudo";
 			return em.createQuery(jpql, Geek.class)	
 					 .setParameter("interet", "" + interets.toLowerCase() + "")		
 					 .getResultList();
@@ -108,11 +109,13 @@ public class GeekDao {
 			{
 				jpql += " where lower(g.sexe) = :sexe";
 				
+				jpql += " order by g.pseudo";
 				return em.createQuery(jpql, Geek.class)
 						 .setParameter("sexe", "" + sexe.toLowerCase() + "")		
 						 .getResultList();
 	   		}
 			
+			jpql += " order by g.pseudo";
 			return em.createQuery(jpql, Geek.class)
 					 .getResultList();
 		}		
