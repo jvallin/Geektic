@@ -40,7 +40,7 @@ public class GeekController
 	
 	
 	@RequestMapping(value = "searchSexe", method = RequestMethod.GET)
-	public ModelAndView showSearchSexe(@RequestParam String radioBouton, String[] combo)
+	public ModelAndView showSearchSexe(@RequestParam String radioBouton, String combo)
 	{
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("geeks", service.findByInteret(radioBouton, combo));

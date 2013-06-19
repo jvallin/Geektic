@@ -17,7 +17,7 @@ dependencies {
     compile('org.glassfish.web:javax.servlet.jsp.jstl:1.2.1') {
         transitive = false
     }
-    runtime 'org.hsqldb:hsqldb:2.2.9'
+    compile 'org.hsqldb:hsqldb:2.2.9'
     
     testCompile 'junit:junit:4.+'
     testCompile 'org.mockito:mockito-all:1.9.0'

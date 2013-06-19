@@ -72,26 +72,12 @@ public class GeekDao {
 				 .getResultList();
 	}
 	
-	public List<Geek> findByInteret(String sexe, String[] listInterets) {
+	public List<Geek> findByInteret(String sexe, String listInterets) {
 		
-		String interets = "";
-		
-		if(listInterets != null)
-		{
-			for(int i=0; i<listInterets.length-1; i++)
-			{
-				interets += ""+listInterets[i]+"";
-				interets += ",";
-			}
 			
-			interets += ""+listInterets[listInterets.length-1] + "";
-		}
-		
-		System.out.println(interets);
-		
 		String jpql = "select g from Geek g";		
 		
-		if(!interets.equals("")) // si il y a au moins un interet
+		if(listInterets != null) // si il y a au moins un interet
 		{
 			jpql += " join g.interets i";
 			jpql += " where lower(i.libelle) in (:interet) ";
@@ -101,14 +87,14 @@ public class GeekDao {
 				jpql += " order by g.pseudo";
 				return em.createQuery(jpql, Geek.class)
 						 .setParameter("sexe", "" + sexe.toLowerCase() + "")	
-						 .setParameter("interet", "" + interets.toLowerCase() + "")		
+						 .setParameter("interet", "" + listInterets.toLowerCase() + "")		
 						 .getResultList();
 	   		}
 			
 			jpql += " order by g.pseudo";
 			
 			List<Geek> liste = em.createQuery(jpql, Geek.class)	
-					 .setParameter("interet", "" + interets.toLowerCase() + "")		
+					 .setParameter("interet", "" + listInterets.toLowerCase() + "")		
 					 .getResultList();
 			System.out.println(liste);
 			return liste;

@@ -55,7 +55,7 @@ public class ServiceGeek implements IService
 		dao.persist(geek);
 	}
 
-	public List<Geek> findByInteret(String sexe, String[] interets)
+	public List<Geek> findByInteret(String sexe, String interets)
 	{
 		return dao.findByInteret(sexe, interets);
 	}
