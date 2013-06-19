@@ -66,8 +66,20 @@ public class TestService
     }
     
     @Test
-    public void testFindBySexeM() {
-    	List<Geek> listeGeek = dao.findBySexe("M");
+    public void testFindBySexeH() {
+    	List<Geek> listeGeek = dao.findBySexe("H");
     	assertEquals(9, listeGeek.size());
+    }
+    
+    @Test
+    public void testFindBySexeHInteretJAVA() {
+    	List<Geek> listeGeek = dao.findByInteret("H", "JAVA");
+    	assertEquals(1, listeGeek.size());
+    }
+    
+    @Test
+    public void testFindBySexeDInteretHTML() {
+    	List<Geek> listeGeek = dao.findByInteret("D", "HTML");
+    	assertEquals(4, listeGeek.size());
     }
 }
